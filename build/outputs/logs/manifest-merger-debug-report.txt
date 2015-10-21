@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 	android:versionName
@@ -11,6 +9,8 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 uses-permission#android.permission.WAKE_LOCK
 ADDED from AndroidManifest.xml:7:5
 	android:name
@@ -73,10 +73,10 @@ ADDED from AndroidManifest.xml:23:5
 		ADDED from AndroidManifest.xml:27:9
 meta-data#com.amap.api.v2.apikey
 ADDED from AndroidManifest.xml:29:9
-	android:name
-		ADDED from AndroidManifest.xml:30:13
 	android:value
 		ADDED from AndroidManifest.xml:31:13
+	android:name
+		ADDED from AndroidManifest.xml:30:13
 activity#com.example.irun.MainActivity
 ADDED from AndroidManifest.xml:33:9
 	android:label
@@ -95,25 +95,25 @@ ADDED from AndroidManifest.xml:39:17
 		ADDED from AndroidManifest.xml:39:27
 service#com.example.irun.SocketService
 ADDED from AndroidManifest.xml:43:9
-	android:exported
-		ADDED from AndroidManifest.xml:46:13
 	android:enabled
 		ADDED from AndroidManifest.xml:45:13
+	android:exported
+		ADDED from AndroidManifest.xml:46:13
 	android:name
 		ADDED from AndroidManifest.xml:44:13
 service#com.example.irun.MusicService
 ADDED from AndroidManifest.xml:48:9
-	android:exported
-		ADDED from AndroidManifest.xml:51:13
 	android:enabled
 		ADDED from AndroidManifest.xml:50:13
+	android:exported
+		ADDED from AndroidManifest.xml:51:13
 	android:name
 		ADDED from AndroidManifest.xml:49:13
 service#com.example.irun.AccelerometerSensorService
 ADDED from AndroidManifest.xml:53:9
-	android:exported
-		ADDED from AndroidManifest.xml:56:13
 	android:enabled
 		ADDED from AndroidManifest.xml:55:13
+	android:exported
+		ADDED from AndroidManifest.xml:56:13
 	android:name
 		ADDED from AndroidManifest.xml:54:13

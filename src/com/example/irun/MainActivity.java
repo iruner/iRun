@@ -14,7 +14,7 @@ import android.view.WindowManager;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-//Ö÷Activity£¬¹ÜÀí½çÃæµÄÇÐ»»
+//ï¿½ï¿½Activityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
 public class MainActivity extends Activity {
 
 	private FragmentManager fm;
@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	private MainFragment fragment1;
 	private ChooseChatFragment fragment2;
 	private MyMapFragment fragment3;
-	private WeatherFragment fragment4;
+	private MeFragment fragment4;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -135,8 +135,8 @@ public class MainActivity extends Activity {
 			radioGroup.getChildAt(3).setSelected(true);
 			if(fragment4 == null)
 			{
-				fragment4 = new WeatherFragment();
-				ft.add(R.id.content, fragment4,"StepSettingFragment");
+				fragment4 = new MeFragment();
+				ft.add(R.id.content, fragment4,"MeFragment");
 			}
 			else 
 			{

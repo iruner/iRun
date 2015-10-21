@@ -6,4 +6,4 @@
     <item android:state_selected="true" android:drawable="@drawable/chatto_bg_focused" />
     <item android:drawable="@drawable/chatto_bg_normal" />
 </selector>
-<!-- From: file:/D:/GitHub/iRun/res/drawable-ldpi/chatto_bg.xml -->
+<!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/drawable-ldpi/chatto_bg.xml -->
