@@ -15,6 +15,8 @@
 		<FrameLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
 			android:background="#be7760"
 			android:clickable="true">
 
@@ -23,21 +25,11 @@
 				android:layout_height="wrap_content"
 				android:layout_marginEnd="10dp"
 				android:layout_marginRight="10dp"
-				android:background="@android:drawable/ic_menu_sort_by_size"
+				android:background="@drawable/settings"
 				android:id="@+id/Settings"
-				android:layout_gravity="left|top"
+				android:layout_gravity="right|top"
 				android:typeface="monospace" />
 
-			<ImageButton
-				android:layout_width="wrap_content"
-				android:layout_height="match_parent"
-				android:layout_marginStart="10dp"
-				android:layout_marginLeft="10dp"
-				android:id="@+id/Head"
-				android:src="@android:drawable/btn_star_big_on"
-				android:background="@android:color/transparent"
-				android:layout_gravity="right|center_vertical"
-				android:contentDescription="Head" />
 		</FrameLayout>
 
 		<LinearLayout
@@ -205,7 +197,7 @@
 								android:includeFontPadding="false"
 								android:paddingLeft="17.0dip"
 								android:text="个人资料"
-								android:textColor="#ff333333"
+								android:textColor="@color/btn_bg_unen"
 								android:textSize="16.0sp"
 								android:id="@+id/id_personal" />
 
@@ -347,6 +339,7 @@
 							<Switch
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
+								android:background="@color/transparent"
 								android:id="@+id/switch1"
 								android:checked="true" />
 						</TableRow>

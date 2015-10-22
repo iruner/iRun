@@ -3,18 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background" >
+    android:background="@color/transparent" >
     
     <ImageView 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/mini_avatar_shadow"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/head"/>
     
     <Button
         android:id="@+id/drawerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="login"/>
+        android:text="点击登录"
+        android:textColor="@color/white" />
     
     <ListView  
         android:id="@+id/drawerList"  
@@ -22,7 +23,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"      
         android:layout_gravity="end"  
-        android:background="#ffffcc"  
+        android:background="@color/light_green"
         android:choiceMode="singleChoice"  
         android:divider="@android:color/transparent"  
         android:dividerHeight="0dp" >  

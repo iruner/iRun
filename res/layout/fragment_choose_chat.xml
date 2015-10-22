@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <LinearLayout 
+    <FrameLayout
         android:layout_width="match_parent"
     	android:layout_height="50dp"
+        android:background="#be7760"
     	android:orientation="horizontal">
         
         <TextView
@@ -14,42 +15,56 @@
         	android:layout_width="match_parent"
         	android:layout_height="30dp"
         	android:text="title"
-        	android:gravity="center_horizontal|center_vertical" />
-        
-    </LinearLayout> 
-    
-    <Button
-        android:id="@+id/buttonGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="群聊" />
-    
-    <LinearLayout 
+        	android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发起群聊"
+            android:layout_gravity="right"
+            android:textColor="@color/black" />
+
+    </FrameLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
         android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加好友" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10" >
+            android:ems="10"
+            android:hint="输入昵称查找好友">
 
             <requestFocus />
         </EditText>
 
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="添加好友" />
-        
     </LinearLayout>
 
     <ListView 
         android:id="@+id/listview"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         

@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\android-support-v4.jar"
+        jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\AMap_2DMap_v2.6.0_20150916.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="e19387dc3b060af32f5401f84fbe246635256955">
-        <dex dex="D:\360data\重要数据\我的文档\GitHub\iRun\build\intermediates\pre-dexed\debug\android-support-v4-004dd0253036e433875fdbe8031971c52ce86737.jar" />
+        sha1="5c0e7ea9bde9d882c99dd37c7ea8f7e091a8f2c1">
+        <dex dex="D:\360data\重要数据\我的文档\GitHub\iRun\build\intermediates\pre-dexed\debug\AMap_2DMap_v2.6.0_20150916-8411c9e342862091582e28120523b81b6148efe8.jar" />
     </item>
     <item
         jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\AMap_Location_v1.4.1_20150917.jar"
@@ -16,11 +16,11 @@
         <dex dex="D:\360data\重要数据\我的文档\GitHub\iRun\build\intermediates\pre-dexed\debug\AMap_Location_v1.4.1_20150917-85b65a846a50a21d518de8caeadacc5dd538220c.jar" />
     </item>
     <item
-        jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\AMap_2DMap_v2.6.0_20150916.jar"
+        jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\android-support-v4.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="5c0e7ea9bde9d882c99dd37c7ea8f7e091a8f2c1">
-        <dex dex="D:\360data\重要数据\我的文档\GitHub\iRun\build\intermediates\pre-dexed\debug\AMap_2DMap_v2.6.0_20150916-8411c9e342862091582e28120523b81b6148efe8.jar" />
+        sha1="e19387dc3b060af32f5401f84fbe246635256955">
+        <dex dex="D:\360data\重要数据\我的文档\GitHub\iRun\build\intermediates\pre-dexed\debug\android-support-v4-004dd0253036e433875fdbe8031971c52ce86737.jar" />
     </item>
     <item
         jar="D:\360data\重要数据\我的文档\GitHub\iRun\libs\classes.jar"

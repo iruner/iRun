@@ -11,6 +11,7 @@
     <color name="green">#cbe894</color>
     <color name="grey"> #ebebeb</color>
     <color name="light_green">#f0f9ff</color>
+    <color name="light_grey"> #fffff7</color>
     <color name="red"> #FF0000</color>
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>
@@ -81,6 +82,7 @@
     <string name="location_time">定位时间：</string>
     <string name="location_title">定位</string>
     <string name="low">低</string>
+    <string name="main_font_size">20sp</string>
     <string name="menu_settings">设置</string>
     <string name="monday">星期一</string>
     <string name="month">月\t</string>

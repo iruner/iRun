@@ -17,13 +17,14 @@
         android:layout_gravity="top|left"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@color/grey"
+        android:background="@color/transparent"
         android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/mapNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/light_grey"
             android:checked="true"
             android:text="标准地图"
             android:textColor="@android:color/black" />
@@ -32,6 +33,7 @@
             android:id="@+id/mapSatellite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/light_grey"
             android:text="卫星地图"
             android:textColor="@android:color/black" />
     </RadioGroup>

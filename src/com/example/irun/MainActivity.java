@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Bundle;  
 import android.app.FragmentManager;  
-import android.app.FragmentTransaction; 
+import android.app.FragmentTransaction;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -65,9 +65,16 @@ public class MainActivity extends Activity {
 		stopService(new Intent(MainActivity.this, AccelerometerSensorService.class));
 		super.onDestroy();
 	}
-	
+
+	//定义按返回键时做的事情，这里需要从将堆栈头元素push出
 	@Override
 	public void onBackPressed() {
+		FragmentManager fm=getFragmentManager();
+		FragmentTransaction ft=fm.beginTransaction();
+		//这里有个缺陷，就是过渡不自然，关于borromBar
+		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+		fm.popBackStack();
+
 	}
 	
 	private void setFragmentShow(int index)

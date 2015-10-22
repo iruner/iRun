@@ -17,8 +17,11 @@
         android:layout_width="fill_parent"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_bar"
+        android:background="@color/darkgrey"
         android:gravity="bottom" >
+
+		//设置底下栏样式
+		//android:background="@drawable/bottom_bar"
 	    
         <RadioGroup
             android:layout_width="fill_parent"

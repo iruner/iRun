@@ -24,9 +24,8 @@ public class MeFragment extends Fragment implements OnClickListener {
 
     private TableRow tr1;
     private TableRow tr2;
+    private TableRow tr4;
 
-    private TextView tv1;
-    private TextView tv2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,13 +35,9 @@ public class MeFragment extends Fragment implements OnClickListener {
 
         tr1 = (TableRow) view.findViewById(R.id.more_page_row1);
         tr2 = (TableRow) view.findViewById(R.id.more_page_row2);
+        tr4 = (TableRow) view.findViewById(R.id.more_page_row11);
 
-        tr1.setOnClickListener(this);
-        tr1.setOnClickListener(this);
-
-        tv1 = (TextView) view.findViewById(R.id.id_personal);
-        tv2 = (TextView) view.findViewById(R.id.id_stepsetting);
-
+        tr4.setOnClickListener(this);
 
         return view;
     }
@@ -50,16 +45,16 @@ public class MeFragment extends Fragment implements OnClickListener {
     public void onClick(View v){
         FragmentManager fm=getFragmentManager();
         FragmentTransaction ft=fm.beginTransaction();
-        Fragment weatherFragment=new WeatherFragment();
         switch(v.getId()){
             case R.id.more_page_row1:
-                ft.hide(this);
-                ft.show(weatherFragment);
-                //ft.addToBackStack(w);
-                ft.commit();
                 break;
-            case R.id.more_page_row2:
-                tv1.setText("clicked");
+            case R.id.more_page_row11:
+                MainActivity.bottomBar.setVisibility(View.GONE);
+                ft.hide(this);
+                //��R.id.*���ڵ�layout����Fragment��new **()��ָ��Ĳ���***
+                ft.add(R.id.content, new WeatherFragment(), "weather_ui");
+                ft.addToBackStack(null);
+                ft.commit();
                 break;
         }
     }

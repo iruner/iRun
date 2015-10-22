@@ -9,6 +9,7 @@
     <string name="gpsrotate">旋转</string>
     <string name="menu_settings">设置</string>
     <string name="step_number">步\t数</string>
+    <string name="main_font_size">20sp</string>
     <string name="use_time">用\t时</string>
     <string name="distance">行 程</string>
     <string name="calories">热 量</string>
