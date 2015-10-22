@@ -11,7 +11,7 @@
     </com.amap.api.maps2d.MapView>
 
     <RadioGroup
-        android:id="@+id/gps_radio_group"
+        android:id="@+id/routegroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|left"
@@ -20,22 +20,31 @@
         android:background="@color/transparent"
         android:orientation="horizontal" >
 
-        <RadioButton
-            android:id="@+id/mapNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:checked="true"
-            android:text="标准地图"
-            android:textColor="@android:color/black" />
+
 
         <RadioButton
-            android:id="@+id/mapSatellite"
+            android:id="@+id/route1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/light_grey"
-            android:text="卫星地图"
+            android:text="路线1"
             android:textColor="@android:color/black" />
+        <RadioButton
+            android:id="@+id/route2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:text="路线2"
+            android:textColor="@android:color/black" />
+        <RadioButton
+            android:id="@+id/route3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:text="路线3"
+            android:textColor="@android:color/black" />
+
     </RadioGroup>
+
 
 </FrameLayout>

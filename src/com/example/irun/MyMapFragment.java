@@ -1,141 +1,154 @@
 package com.example.irun;
 
+import android.provider.SyncStateContract;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.location.Location;
+import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.RadioGroup;
+
+
+import java.util.List;
+
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.location.LocationManagerProxy;
 import com.amap.api.location.LocationProviderProxy;
-import com.amap.api.maps2d.AMap;
-import com.amap.api.maps2d.CameraUpdate;
-import com.amap.api.maps2d.CameraUpdateFactory;
-import com.amap.api.maps2d.MapView;
-import com.amap.api.maps2d.LocationSource;
-import android.app.Fragment;
-import android.location.Location;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 
-//µØÍ¼½çÃæ
-public class MyMapFragment extends Fragment implements LocationSource,AMapLocationListener, 
-                       OnCheckedChangeListener {
- 
-	private AMap aMap;
+
+import com.amap.api.maps2d.AMap;
+import com.amap.api.maps2d.LocationSource;
+import com.amap.api.maps2d.MapView;
+import com.amap.api.maps2d.model.Marker;
+import com.amap.api.maps2d.model.MyLocationStyle;
+import com.amap.api.maps2d.overlay.WalkRouteOverlay;
+import com.amap.api.services.core.LatLonPoint;
+import com.amap.api.services.route.BusRouteResult;
+import com.amap.api.services.route.DriveRouteResult;
+import com.amap.api.services.route.RouteSearch;
+import com.amap.api.services.route.WalkPath;
+import com.amap.api.services.route.WalkRouteResult;
+
+
+public class MyMapFragment extends Fragment implements LocationSource,AMapLocationListener,
+		RouteSearch.OnRouteSearchListener,RadioGroup.OnCheckedChangeListener {
+
 	private MapView mapView;
-	private OnLocationChangedListener mListener;
+	private AMap aMap;
 	private LocationManagerProxy mAMapLocationManager;
-	private RadioGroup mGPSModeGroup;
-	
+	private OnLocationChangedListener mListener;
+	private LatLonPoint startPoint = null;
+	private LatLonPoint endPoint = null;
+	private Marker startMk, targetMk;
+	private int walkMode = RouteSearch.WalkDefault;
+	private RouteSearch routeSearch;
+	private WalkRouteResult walkRouteResult;
+	private RadioGroup routegroup;
+
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+							 Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_map, container, false);
-		
+
 		mapView = (MapView) view.findViewById(R.id.map);
-		mapView.onCreate(savedInstanceState);// ´Ë·½·¨±ØĞëÖØĞ´
-		
-		mGPSModeGroup = (RadioGroup) view.findViewById(R.id.gps_radio_group);
-		mGPSModeGroup.setOnCheckedChangeListener(this);
-		
+		mapView.onCreate(savedInstanceState);
+		routegroup = (RadioGroup) view.findViewById(R.id.routegroup);
+		routegroup.setOnCheckedChangeListener(this);
+
+
+
+
 		init();
-		
+		setUpMap();
+
 		return view;
 	}
 
+	public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+		switch (checkedId) {
+
+			case R.id.route1:
+				startPoint = new LatLonPoint(23.147,113.257);
+				endPoint= new LatLonPoint(23.148,113.325);
+				break;
+			case R.id.route2:
+				startPoint = new LatLonPoint(23.115,113.324);
+				endPoint= new LatLonPoint(23.101,113.363);
+				break;
+			case R.id.route3:
+				startPoint = new LatLonPoint(23.066,113.398);
+				endPoint= new LatLonPoint(23.063,113.337);
+				break;
+		}
+		searchRouteResult(startPoint, endPoint);
+		onWalkRouteSearched(walkRouteResult, 0);
+
+	}
+
+
+
+
 	private void init() {
 		if (aMap == null) {
-			aMap = mapView.getMap();
-			setUpMap();
-		}		
+
+			aMap = mapView.getMap();//åˆ›å»ºåœ°å›¾
+
+		}
 	}
-	
-	/**
-	 * ÉèÖÃÒ»Ğ©amapµÄÊôĞÔ
-	 */
+
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		mapView.onSaveInstanceState(outState);
+	}
+
+
 	private void setUpMap() {
-		aMap.setLocationSource(this);// ÉèÖÃ¶¨Î»¼àÌı
-		aMap.getUiSettings().setMyLocationButtonEnabled(true);// ÉèÖÃÄ¬ÈÏ¶¨Î»°´Å¥ÊÇ·ñÏÔÊ¾
-		aMap.setMyLocationEnabled(true);// ÉèÖÃÎªtrue±íÊ¾ÏÔÊ¾¶¨Î»²ã²¢¿É´¥·¢¶¨Î»£¬false±íÊ¾Òş²Ø¶¨Î»²ã²¢²»¿É´¥·¢¶¨Î»£¬Ä¬ÈÏÊÇfalse
-		
-		aMap.setMapType(AMap.MAP_TYPE_NORMAL);
-		
-		//µØÍ¼Ëõ·Å¼¶±ğÎª4-20¼¶
-		//Èç¹ûÏëÈÃµØÍ¼·Å´óµ½×î´ó£¬18ÊÇÒ»¸öºÏÊÊÖµ
-		CameraUpdate cu = CameraUpdateFactory.zoomTo(18);
-		aMap.animateCamera(cu, null);
-	}
-	
-	@Override
-	public void onLocationChanged(Location location) {
-		// TODO Auto-generated method stub
-		
+
+
+		aMap.setLocationSource(this);// è®¾ç½®å®šä½ç›‘å¬
+		aMap.getUiSettings().setMyLocationButtonEnabled(true);// è®¾ç½®é»˜è®¤å®šä½æŒ‰é’®æ˜¯å¦æ˜¾ç¤º
+		aMap.setMyLocationEnabled(true);
+		MyLocationStyle myLocationStyle = new MyLocationStyle();
+
+
+		//  AMap.moveCamera(CameraUpdateFactory.zoomTo(14));
+
+
+
+
+
 	}
 	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void onCheckedChanged(RadioGroup group, int checkedId) {
-		switch (checkedId) {
-		case R.id.mapNormal:
-			aMap.setMapType(AMap.MAP_TYPE_NORMAL);
-			break;
-		case R.id.mapSatellite:
-			aMap.setMapType(AMap.MAP_TYPE_SATELLITE);
-			break;
-		}	
-	}
-	
-	/**
-	 * ¶¨Î»³É¹¦ºó»Øµ÷º¯Êı
-	 */
-	@Override
-	public void onLocationChanged(AMapLocation arg0) {
-		if (mListener != null && arg0 != null) {
-			if (arg0 != null
-					&& arg0.getAMapException().getErrorCode() == 0) {
-				mListener.onLocationChanged(arg0);// ÏÔÊ¾ÏµÍ³Ğ¡À¶µã
-			} else {
-				Log.e("AmapErr","Location ERR:" + arg0.getAMapException().getErrorCode());
+	public void onLocationChanged(AMapLocation amapLocation) {
+		if (mListener != null && amapLocation != null) {
+			if (amapLocation.getAMapException().getErrorCode() == 0) {
+				mListener.onLocationChanged(amapLocation);// æ˜¾ç¤ºç³»ç»Ÿå°è“ç‚¹
 			}
-		}	
-	}
-	
-	/**
-	 * ¼¤»î¶¨Î»
-	 */
-	@Override
-	public void activate(OnLocationChangedListener arg0) {
-		mListener = arg0;
+		}
+	}   //å®šä½æˆåŠŸå›è°ƒå‡½æ•°
+
+	public void activate(OnLocationChangedListener listener) {
+		mListener = listener;
 		if (mAMapLocationManager == null) {
 			mAMapLocationManager = LocationManagerProxy.getInstance(getActivity());
-			// ´Ë·½·¨ÎªÃ¿¸ô¹Ì¶¨Ê±¼ä»á·¢ÆğÒ»´Î¶¨Î»ÇëÇó£¬ÎªÁË¼õÉÙµçÁ¿ÏûºÄ»òÍøÂçÁ÷Á¿ÏûºÄ£¬
-			// ×¢ÒâÉèÖÃºÏÊÊµÄ¶¨Î»Ê±¼äµÄ¼ä¸ô£¨×îĞ¡¼ä¸ôÖ§³ÖÎª2000ms£©£¬²¢ÇÒÔÚºÏÊÊÊ±¼äµ÷ÓÃremoveUpdates()·½·¨À´È¡Ïû¶¨Î»ÇëÇó
-			// ÔÚ¶¨Î»½áÊøºó£¬ÔÚºÏÊÊµÄÉúÃüÖÜÆÚµ÷ÓÃdestroy()·½·¨
-			// ÆäÖĞÈç¹û¼ä¸ôÊ±¼äÎª-1£¬Ôò¶¨Î»Ö»¶¨Ò»´Î
-			// ÔÚµ¥´Î¶¨Î»Çé¿öÏÂ£¬¶¨Î»ÎŞÂÛ³É¹¦Óë·ñ£¬¶¼ÎŞĞèµ÷ÓÃremoveUpdates()·½·¨ÒÆ³ıÇëÇó£¬¶¨Î»sdkÄÚ²¿»áÒÆ³ı
+			//æ­¤æ–¹æ³•ä¸ºæ¯éš”å›ºå®šæ—¶é—´ä¼šå‘èµ·ä¸€æ¬¡å®šä½è¯·æ±‚ï¼Œä¸ºäº†å‡å°‘ç”µé‡æ¶ˆè€—æˆ–ç½‘ç»œæµé‡æ¶ˆè€—ï¼Œ
+			//æ³¨æ„è®¾ç½®åˆé€‚çš„å®šä½æ—¶é—´çš„é—´éš”ï¼Œå¹¶ä¸”åœ¨åˆé€‚æ—¶é—´è°ƒç”¨removeUpdates()æ–¹æ³•æ¥å–æ¶ˆå®šä½è¯·æ±‚
+			//åœ¨å®šä½ç»“æŸåï¼Œåœ¨åˆé€‚çš„ç”Ÿå‘½å‘¨æœŸè°ƒç”¨destroy()æ–¹æ³•
+			//å…¶ä¸­å¦‚æœé—´éš”æ—¶é—´ä¸º-1ï¼Œåˆ™å®šä½åªå®šä¸€æ¬¡
 			mAMapLocationManager.requestLocationData(
-					LocationProviderProxy.AMapNetwork, 60 * 1000, 10, this);
-		}	
+					LocationProviderProxy.AMapNetwork, 60*1000, 10, this);
+		}
 	}
-	
-	/**
-	 * Í£Ö¹¶¨Î»
-	 */
+
 	@Override
 	public void deactivate() {
 		mListener = null;
@@ -143,30 +156,83 @@ public class MyMapFragment extends Fragment implements LocationSource,AMapLocati
 			mAMapLocationManager.removeUpdates(this);
 			mAMapLocationManager.destroy();
 		}
-		mAMapLocationManager = null;	
+		mAMapLocationManager = null;
+
+
 	}
-	
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-        mapView.onDestroy();
+
+	public void searchRouteResult(LatLonPoint startPoint, LatLonPoint endPoint) {
+		routeSearch = new RouteSearch(getActivity());
+		routeSearch.setRouteSearchListener(this);
+		final RouteSearch.FromAndTo fromAndTo = new RouteSearch.FromAndTo(
+				startPoint, endPoint);
+
+
+
+		RouteSearch.WalkRouteQuery query = new RouteSearch.WalkRouteQuery(fromAndTo,
+				//       walkMode
+				2);
+		if(query != null)
+			routeSearch.calculateWalkRouteAsyn(query);// å¼‚æ­¥è·¯å¾„è§„åˆ’æ­¥è¡Œæ¨¡å¼æŸ¥è¯¢
 	}
 
 	@Override
-	public void onPause() {
-		super.onPause();
-        mapView.onPause();
+	public void onBusRouteSearched(BusRouteResult busRouteResult, int i) {
+
 	}
 
 	@Override
-	public void onResume() {
-		super.onResume();
-        mapView.onResume();
+	public void onDriveRouteSearched(DriveRouteResult driveRouteResult, int i) {
+
 	}
-	
+
+	//@Override
+	public void onWalkRouteSearched(WalkRouteResult result, int rCode) {
+
+		if (rCode == 0) {
+
+
+			if (result != null && result.getPaths() != null
+					&& result.getPaths().size() > 0) {
+				walkRouteResult = result;
+				WalkPath walkPath = walkRouteResult.getPaths().get(0);
+				aMap.clear();// æ¸…ç†åœ°å›¾ä¸Šçš„æ‰€æœ‰è¦†ç›–ç‰©
+				WalkRouteOverlay walkRouteOverlay = new WalkRouteOverlay(getActivity(),
+						aMap, walkPath, walkRouteResult.getStartPos(),
+						walkRouteResult.getTargetPos());
+				walkRouteOverlay.removeFromMap();
+				walkRouteOverlay.addToMap();
+				walkRouteOverlay.zoomToSpan();
+			} else {
+				//  ToastUtil.show(RouteActivity.this, R.string.no_result);
+			}
+		} else if (rCode == 27) {
+			//  ToastUtil.show(RouteActivity.this, R.string.error_network);
+		} else if (rCode == 32) {
+			//  ToastUtil.show(RouteActivity.this, R.string.error_key);
+		} else {
+			//    ToastUtil.show(RouteActivity.this, getString(R.string.error_other) + rCode);
+		}
+	}
+
+
 	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-	    mapView.onSaveInstanceState(outState);
+	public void onLocationChanged(Location location) {
+
+	}
+
+	@Override
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+
+	}
+
+	@Override
+	public void onProviderEnabled(String provider) {
+
+	}
+
+	@Override
+	public void onProviderDisabled(String provider) {
+
 	}
 }
