@@ -72,7 +72,7 @@ public class LoginFragment extends Fragment implements OnClickListener {
 				if(isLoginSuccess)
 				{
 					Toast.makeText(getActivity(), "login success", Toast.LENGTH_SHORT).show();
-					UserInfo.setID(editUser.getText().toString());
+					UserInfo.setId(editUser.getText().toString());
 					toMainFragment();
 				}
 				else 
