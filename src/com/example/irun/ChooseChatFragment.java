@@ -50,7 +50,7 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		buttonGroup = (Button)view.findViewById(R.id.buttonGroup);
 		listView = (ListView)view.findViewById(R.id.listview);
 		
-		textTitle.setText(UserInfo.getID() + "的通讯录");
+		textTitle.setText(UserInfo.getId() + "的通讯录");
 		buttonAdd.setOnClickListener(this);
 		buttonGroup.setOnClickListener(this);
 		listView.setOnItemClickListener(this);

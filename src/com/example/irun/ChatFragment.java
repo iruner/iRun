@@ -194,7 +194,7 @@ public class ChatFragment extends Fragment implements
 		String content = editText.getText().toString();
 		if(content.length() > 0) {
 			ChatMsgEntity entity = new ChatMsgEntity();
-			entity.setName(UserInfo.getID());
+			entity.setName(UserInfo.getId());
 			entity.setDate(getDate());
 			entity.setMessage(RegularExpressionUtil.change(content));
 			entity.setMsgType(true);
@@ -208,7 +208,7 @@ public class ChatFragment extends Fragment implements
 			try {
 				JSONObject root = new JSONObject();
 				root.put("content", content);
-				root.put("fromID", UserInfo.getID());
+				root.put("fromID", UserInfo.getId());
 				root.put("toID", toID);
 				SocketService.send(root.toString());
 			} catch (JSONException e) {
