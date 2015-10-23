@@ -14,7 +14,7 @@ import android.view.WindowManager;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-//��Activity�����������л�
+//锟斤拷Activity锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫伙拷
 public class MainActivity extends Activity {
 
 	private FragmentManager fm;
@@ -25,6 +25,8 @@ public class MainActivity extends Activity {
 	private ChooseChatFragment fragment2;
 	private MyMapFragment fragment3;
 	private MeFragment fragment4;
+	
+	private int currentIndex = 0;//当前是第几个页面，从0开始算
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +68,12 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 	}
 
-	//定义按返回键时做的事情，这里需要从将堆栈头元素push出
+	//瀹氫箟鎸夎繑鍥為敭鏃跺仛鐨勪簨鎯咃紝杩欓噷闇�浠庡皢鍫嗘爤澶村厓绱爌ush鍑�
 	@Override
 	public void onBackPressed() {
 		FragmentManager fm=getFragmentManager();
 		FragmentTransaction ft=fm.beginTransaction();
-		//这里有个缺陷，就是过渡不自然，关于borromBar
+		//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 		fm.popBackStack();
 
@@ -80,6 +82,16 @@ public class MainActivity extends Activity {
 	private void setFragmentShow(int index)
 	{
 		FragmentTransaction ft = fm.beginTransaction();
+		
+		if (index > currentIndex) 
+		{
+			ft.setCustomAnimations(R.animator.slide_left_in, R.animator.slide_left_out);
+		} 
+		else if (index < currentIndex)
+		{
+			ft.setCustomAnimations(R.animator.slide_right_in,R.animator.slide_right_out);
+		}
+		
 		if(fragment1 != null)
 		{
 			ft.hide(fragment1);
@@ -155,6 +167,7 @@ public class MainActivity extends Activity {
 			break;
 		}
 		
+		currentIndex = index;
 		ft.commit();
 	}
 }
