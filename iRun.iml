@@ -83,6 +83,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="AMap_Services_V2.5.0" level="project" />
     <orderEntry type="library" exported="" name="AMap_2DMap_v2.6.0_20150916" level="project" />
     <orderEntry type="library" exported="" name="AMap_Location_v1.4.1_20150917" level="project" />
     <orderEntry type="library" exported="" name="android-support-v4" level="project" />

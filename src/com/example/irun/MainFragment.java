@@ -11,24 +11,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.DrawerLayout.DrawerListener;
-import android.view.DragEvent;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnDragListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.SlidingDrawer.OnDrawerCloseListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 //显示模型的界面，同时还有计步器的功能
 public class MainFragment extends Fragment implements OnClickListener {
 
 	private FragmentManager fragmentManager;
 	public static DrawerLayout drawerLayout;
+	private View topBarLayout;
 	private View buttonLayout;
 	private View textViewLayout;
 	
@@ -50,6 +46,11 @@ public class MainFragment extends Fragment implements OnClickListener {
 	private int weight;//体重
 	//-----计步功能
 	
+	private Button buttonOpenDrawer;
+	private Button buttonStart;
+	private Button buttonPause;
+	private Button buttonClear;
+	
 	public static boolean canRandom = true;//模型能否随机播放语音和动作
 	
 	@Override
@@ -59,6 +60,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 	
 		fragmentManager = getFragmentManager();
 		drawerLayout = (DrawerLayout) view.findViewById(R.id.drawerLayout);  
+		topBarLayout = view.findViewById(R.id.topBarLayout);
 		buttonLayout = view.findViewById(R.id.buttonLayout);
 		textViewLayout = view.findViewById(R.id.textViewLayout);
 		
@@ -82,13 +84,19 @@ public class MainFragment extends Fragment implements OnClickListener {
 //		View playerView = unityPlayer.getView();
 //		LinearLayout ll = (LinearLayout)view.findViewById(R.id.unityViewLyaout);
 //		ll.addView(playerView);
-			
-		Button buttonStart = (Button)view.findViewById(R.id.buttonStart);
-		Button buttonPause = (Button)view.findViewById(R.id.buttonPause);
-		Button buttonClear = (Button)view.findViewById(R.id.buttonClear);
+		
+		buttonOpenDrawer = (Button)view.findViewById(R.id.buttonOpenDrawer);
+		buttonStart = (Button)view.findViewById(R.id.buttonStart);
+		buttonPause = (Button)view.findViewById(R.id.buttonPause);
+		buttonClear = (Button)view.findViewById(R.id.buttonClear);
+		
+		buttonOpenDrawer.setOnClickListener(this);
 		buttonStart.setOnClickListener(this);
 		buttonPause.setOnClickListener(this);
 		buttonClear.setOnClickListener(this);
+		
+		buttonStart.setEnabled(true);
+		buttonPause.setEnabled(false);
 		
 		drawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
 			@Override
@@ -143,9 +151,12 @@ public class MainFragment extends Fragment implements OnClickListener {
 			updateInfo();
 			
 			canRandom = false;
+			buttonStart.setEnabled(false);
+			buttonPause.setEnabled(true);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_RUN00_F");
 		}
+		//确保按下开始后才能再按暂停
 		else if(v.getId() == R.id.buttonPause)
 		{
 			Intent intent = new Intent(getActivity(), AccelerometerSensorService.class);
@@ -154,6 +165,8 @@ public class MainFragment extends Fragment implements OnClickListener {
 			handler.removeCallbacks(calculateRunnable);
 			
 			canRandom = true;
+			buttonStart.setEnabled(true);
+			buttonPause.setEnabled(false);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","-0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_WAIT00");
 		}
@@ -173,6 +186,10 @@ public class MainFragment extends Fragment implements OnClickListener {
 			tvDistance.setText(String.format("%.2f",distance));
 			tvCalories.setText(String.format("%.2f",calories));
 			tvVelocity.setText(String.format("%.2f",velocity));
+		}
+		else if(v.getId() == R.id.buttonOpenDrawer)
+		{
+			drawerLayout.openDrawer(Gravity.RIGHT);
 		}
 	}
 	
@@ -233,6 +250,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 	public void hide()
 	{
 		MainActivity.bottomBar.setVisibility(View.GONE);
+		topBarLayout.setVisibility(View.GONE);
 		buttonLayout.setVisibility(View.GONE);
 		textViewLayout.setVisibility(View.GONE);
 	}
@@ -240,6 +258,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 	public void show()
 	{
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+		topBarLayout.setVisibility(View.VISIBLE);
 		buttonLayout.setVisibility(View.VISIBLE);
 		textViewLayout.setVisibility(View.VISIBLE);
 	}

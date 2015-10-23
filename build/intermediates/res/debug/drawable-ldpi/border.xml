@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:drawable="@drawable/whitenooutborder" android:state_pressed="false"></item>
     <item android:drawable="@drawable/pressednooutborder" android:state_pressed="true"></item>
-</selector><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/drawable-ldpi/border.xml -->
+</selector><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/drawable-ldpi/border.xml -->
