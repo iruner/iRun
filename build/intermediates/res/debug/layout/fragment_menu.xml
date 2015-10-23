@@ -8,14 +8,16 @@
     <ImageView 
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/head"/>
+        android:background="@drawable/head"
+        android:layout_gravity="right" />
     
     <Button
         android:id="@+id/drawerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击登录"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:layout_gravity="right" />
     
     <ListView  
         android:id="@+id/drawerList"  
