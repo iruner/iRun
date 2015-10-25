@@ -9,9 +9,9 @@
 
   	<RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-          
-    	<LinearLayout 
+        android:layout_height="match_parent">
+
+        <LinearLayout
 	        android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
 	    	android:layout_weight="1"
@@ -24,9 +24,11 @@
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
+            android:background="@color/black"
             android:weightSum="1">
 
 			<FrameLayout
+			    android:id="@+id/topBarLayout"
 				android:orientation="horizontal"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -40,7 +42,7 @@
 					android:layout_marginEnd="10dp"
 					android:layout_marginRight="10dp"
 					android:background="@drawable/settings"
-					android:id="@+id/button"
+					android:id="@+id/buttonOpenDrawer"
 					android:layout_gravity="right|center_vertical"
 					android:textStyle="bold"
 					android:typeface="monospace" />

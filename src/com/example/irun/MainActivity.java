@@ -4,6 +4,7 @@ import com.unity3d.player.UnityPlayerActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PixelFormat;
 import android.os.Bundle;  
 import android.app.FragmentManager;  
@@ -25,7 +26,7 @@ public class MainActivity extends Activity {
 	private ChooseChatFragment fragment2;
 	private MyMapFragment fragment3;
 	private MeFragment fragment4;
-	
+	private  Datebase database;
 	private int currentIndex = 0;//当前是第几个页面，从0开始算
 	
 	@Override
@@ -33,7 +34,12 @@ public class MainActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
+		try {
+			database.createtable();
+		}catch (Exception e){e.getMessage();}
+
+
 		fm = getFragmentManager();
 		bottomBar = findViewById(R.id.bottomBar);
 		radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
