@@ -26,9 +26,9 @@ public class MainActivity extends Activity {
 	private ChooseChatFragment fragment2;
 	private MyMapFragment fragment3;
 	private MeFragment fragment4;
-	private  Datebase database;
+	//private  Datebase database;
 	private int currentIndex = 0;//当前是第几个页面，从0开始算
-	
+	Datebase database =new Datebase();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		

@@ -10,8 +10,12 @@
         <option name="gradleJvm" value="1.8" />
 =======
         <option name="gradleHome" value="D:\Program Files\Android Studio\gradle\gradle-2.2.1" />
+<<<<<<< HEAD
+        <option name="gradleJvm" value="1.8" />
+=======
         <option name="gradleJvm" value="1.7" />
 >>>>>>> origin/master
+>>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
