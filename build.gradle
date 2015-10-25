@@ -16,7 +16,7 @@ android {
     compileSdkVersion 19
     buildToolsVersion "22.0.1"
 
-    //android{compileOptions.encoding="GBK"}
+    android{compileOptions.encoding="GBK"}
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7

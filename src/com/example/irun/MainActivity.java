@@ -77,23 +77,17 @@ public class MainActivity extends Activity {
 	//瀹氫箟鎸夎繑鍥為敭鏃跺仛鐨勪簨鎯咃紝杩欓噷闇�浠庡皢鍫嗘爤澶村厓绱爌ush鍑�
 	@Override
 	public void onBackPressed() {
-	
 		FragmentManager fm=getFragmentManager();
-<<<<<<< HEAD
 		if(fm.getBackStackEntryCount()==0){
-			super.onBackPressed();
+			Intent intent = new Intent();
+			intent.setAction(Intent.ACTION_MAIN);
+			intent.addCategory(Intent.CATEGORY_HOME);
+			startActivity(intent);
 		}else{
 			//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
-=======
-		FragmentTransaction ft=fm.beginTransaction();
-		MainActivity.bottomBar.setVisibility(View.VISIBLE);
-		MainFragment.drawerLayout.closeDrawers();
-		fm.popBackStack();
->>>>>>> origin/master
-
 	}
 	
 	private void setFragmentShow(int index)

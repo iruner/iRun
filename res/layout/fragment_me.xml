@@ -21,8 +21,9 @@
 			android:clickable="true">
 
 			<Button
-				android:layout_width="48dp"
-				android:layout_height="wrap_content"
+				android:layout_width="@dimen/icon_top"
+				android:layout_height="@dimen/icon_top"
+				android:adjustViewBounds="true"
 				android:layout_marginEnd="10dp"
 				android:layout_marginRight="10dp"
 				android:background="@drawable/settings"
@@ -184,7 +185,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="@drawable/me_selector"
+							android:background="@drawable/tab_background"
 							android:clickable="true"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
@@ -215,7 +216,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/tab_background"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
