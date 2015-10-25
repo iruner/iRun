@@ -10,16 +10,11 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.FragmentManager;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -34,6 +29,7 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 	private EditText editText;
 	private Button buttonAdd;
 	private Button buttonGroup;
+	private Button buttonDel;
 	
 	private ListView listView;
 	private FriendEntityViewAdapter adapter;
@@ -48,11 +44,14 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		editText = (EditText)view.findViewById(R.id.editText);
 		buttonAdd = (Button)view.findViewById(R.id.buttonAdd);
 		buttonGroup = (Button)view.findViewById(R.id.buttonGroup);
+		buttonDel = (Button)view.findViewById(R.id.buttonDel);
+
 		listView = (ListView)view.findViewById(R.id.listview);
 		
 		textTitle.setText(UserInfo.getId() + "µÄÍ¨Ñ¶Â¼");
 		buttonAdd.setOnClickListener(this);
 		buttonGroup.setOnClickListener(this);
+		buttonDel.setOnClickListener(this);
 		listView.setOnItemClickListener(this);
 		
 		list = new ArrayList<FriendEntity>();
@@ -64,6 +63,7 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 
 	@Override
 	public void onClick(View v) {
+		
 		if(v.getId() == R.id.buttonAdd)
 		{
 			if(editText.getText().toString().length() > 0)
@@ -82,6 +82,21 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		{		
 			toChatFragment("Group");
 		}
+		else if(v.getId() == R.id.buttonDel)
+		{		
+			for (int i = 0; i < list.size(); i++) 
+			{
+		         if(list.get(i).getID().equalsIgnoreCase(editText.getText().toString()))
+		         {
+			        list.remove(list.get(i));
+			        adapter.notifyDataSetChanged();
+		            editText.setText(""); 	
+		         }
+			}
+		}
+		
+		
+		
 	}
 
 	@Override
@@ -113,4 +128,3 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		ft.commit();
 	}
 }
-

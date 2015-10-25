@@ -4,6 +4,7 @@ import com.unity3d.player.UnityPlayerActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PixelFormat;
 import android.os.Bundle;  
 import android.app.FragmentManager;  
@@ -25,7 +26,7 @@ public class MainActivity extends Activity {
 	private ChooseChatFragment fragment2;
 	private MyMapFragment fragment3;
 	private MeFragment fragment4;
-	
+	private  Datebase database;
 	private int currentIndex = 0;//当前是第几个页面，从0开始算
 	
 	@Override
@@ -33,7 +34,12 @@ public class MainActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
+		try {
+			database.createtable();
+		}catch (Exception e){e.getMessage();}
+
+
 		fm = getFragmentManager();
 		bottomBar = findViewById(R.id.bottomBar);
 		radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
@@ -71,7 +77,9 @@ public class MainActivity extends Activity {
 	//瀹氫箟鎸夎繑鍥為敭鏃跺仛鐨勪簨鎯咃紝杩欓噷闇�浠庡皢鍫嗘爤澶村厓绱爌ush鍑�
 	@Override
 	public void onBackPressed() {
+	
 		FragmentManager fm=getFragmentManager();
+<<<<<<< HEAD
 		if(fm.getBackStackEntryCount()==0){
 			super.onBackPressed();
 		}else{
@@ -79,6 +87,12 @@ public class MainActivity extends Activity {
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
+=======
+		FragmentTransaction ft=fm.beginTransaction();
+		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+		MainFragment.drawerLayout.closeDrawers();
+		fm.popBackStack();
+>>>>>>> origin/master
 
 	}
 	

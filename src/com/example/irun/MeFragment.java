@@ -51,8 +51,8 @@ public class MeFragment extends Fragment implements OnClickListener {
             case R.id.more_page_row11:
                 MainActivity.bottomBar.setVisibility(View.GONE);
                 ft.hide(this);
-                //��R.id.*���ڵ�layout����Fragment��new **()��ָ��Ĳ���***
-                ft.add(R.id.content, new WeatherFragment(), "weather_ui");
+                //锟斤拷R.id.*锟斤拷锟节碉拷layout锟斤拷锟斤拷Fragment锟斤拷new **()锟斤拷指锟斤拷牟锟斤拷锟�**
+                ft.add(R.id.content, new WeatherFragment(), "WeatherFragment");
                 ft.addToBackStack(null);
                 ft.commit();
                 break;

@@ -1,0 +1,80 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .idea/gradle.xml
+#	modified:   .idea/misc.xml
+#	modified:   .idea/workspace.xml
+#	modified:   .settings/org.eclipse.core.resources.prefs
+#	modified:   bin/classes.dex
+#	modified:   bin/classes/com/example/irun/AccelerometerSensorService.class
+#	modified:   bin/classes/com/example/irun/BuildConfig.class
+#	modified:   bin/classes/com/example/irun/ChatFragment$MessageReceiver.class
+#	modified:   bin/classes/com/example/irun/ChatFragment.class
+#	modified:   bin/classes/com/example/irun/ChatMsgEntity.class
+#	modified:   bin/classes/com/example/irun/ChatMsgListViewAdapter$ViewHolder.class
+#	modified:   bin/classes/com/example/irun/ChatMsgListViewAdapter.class
+#	modified:   bin/classes/com/example/irun/ChooseChatFragment.class
+#	modified:   bin/classes/com/example/irun/Expression.class
+#	modified:   bin/classes/com/example/irun/FriendEntity.class
+#	modified:   bin/classes/com/example/irun/FriendEntityViewAdapter$ViewHolder.class
+#	modified:   bin/classes/com/example/irun/FriendEntityViewAdapter.class
+#	modified:   bin/classes/com/example/irun/LoginFragment$MessageReceiver.class
+#	modified:   bin/classes/com/example/irun/LoginFragment.class
+#	modified:   bin/classes/com/example/irun/MainActivity.class
+#	modified:   bin/classes/com/example/irun/MainFragment.class
+#	modified:   bin/classes/com/example/irun/MenuFragment.class
+#	modified:   bin/classes/com/example/irun/MusicService.class
+#	modified:   bin/classes/com/example/irun/MyMapFragment.class
+#	modified:   bin/classes/com/example/irun/R$anim.class
+#	modified:   bin/classes/com/example/irun/R$animator.class
+#	modified:   bin/classes/com/example/irun/R$attr.class
+#	modified:   bin/classes/com/example/irun/R$color.class
+#	modified:   bin/classes/com/example/irun/R$dimen.class
+#	modified:   bin/classes/com/example/irun/R$drawable.class
+#	modified:   bin/classes/com/example/irun/R$id.class
+#	modified:   bin/classes/com/example/irun/R$layout.class
+#	modified:   bin/classes/com/example/irun/R$menu.class
+#	modified:   bin/classes/com/example/irun/R$mipmap.class
+#	modified:   bin/classes/com/example/irun/R$raw.class
+#	modified:   bin/classes/com/example/irun/R$string.class
+#	modified:   bin/classes/com/example/irun/R$style.class
+#	modified:   bin/classes/com/example/irun/R.class
+#	modified:   bin/classes/com/example/irun/RegularExpressionUtil.class
+#	modified:   bin/classes/com/example/irun/SocketService.class
+#	modified:   bin/classes/com/example/irun/StepDetector.class
+#	modified:   bin/classes/com/example/irun/StepSettingFragment.class
+#	modified:   bin/classes/com/example/irun/UserInfo.class
+#	modified:   bin/classes/com/example/irun/WeatherFragment.class
+#	modified:   bin/dexedLibs/AMap_2DMap_v2.6.0_20150916-f3ec06bde3093acf5f0476cdba3e29f1.jar
+#	modified:   bin/dexedLibs/AMap_Location_v1.4.1_20150917-ad97e6b3020f1867615ac7ef11123467.jar
+#	modified:   bin/dexedLibs/AMap_Services_V2.5.0-ad18b9192130bf9eb25e8246b71c3142.jar
+#	modified:   bin/dexedLibs/android-support-v4-681e6df42bfe0b900d147ca1fdde08c2.jar
+#	modified:   bin/dexedLibs/classes-98b67a133d422687ec04696295f151da.jar
+#	modified:   bin/iRun.apk
+#	deleted:    bin/jarlist.cache
+#	modified:   bin/resources.ap_
+#	modified:   build/intermediates/gradle_project_sync_data.bin
+#	modified:   gen/com/example/irun/R.java
+#	modified:   iRun.iml
+#	modified:   local.properties
+#	modified:   src/com/example/irun/MainActivity.java
+#	modified:   src/com/example/irun/MeFragment.java
+#	modified:   src/com/example/irun/MenuFragment.java
+#
+# Untracked files:
+#	bin/res/crunch/drawable-ldpi/column.png
+#	res/drawable-ldpi/column.png
+#	res/layout/fragment_statistics.xml
+#	res/layout/fragment_task.xml
+#	res/values/attrs.xml
+#	src/com/example/irun/AxleView.java
+#	src/com/example/irun/HistogramView.java
+#	src/com/example/irun/RoundBarView.java
+#	src/com/example/irun/StatisticsFragment.java
+#	src/com/example/irun/TaskFragment.java
+#
+
