@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
+    <eat-comment/>
+    <attr format="dimension" name="circleWidth"/>
+    <attr format="color" name="firstColor"/>
+    <attr format="color" name="secondColor"/>
+    <attr format="integer" name="speed"/>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
     <eat-comment/>
     <color name="black"> #000000</color>
@@ -15,6 +21,7 @@
     <color name="red"> #FF0000</color>
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>
+    <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>

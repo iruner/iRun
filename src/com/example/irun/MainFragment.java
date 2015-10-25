@@ -8,6 +8,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
@@ -50,7 +51,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 	private Button buttonStart;
 	private Button buttonPause;
 	private Button buttonClear;
-	private  Datebase database;
+	Datebase database = new Datebase();
 	public static boolean canRandom = true;//模型能否随机播放语音和动作
 	
 	@Override
@@ -172,10 +173,18 @@ public class MainFragment extends Fragment implements OnClickListener {
 		}
 		else if(v.getId() == R.id.buttonClear)
 		{
-			StepDetector.CURRENT_SETP = 0;
 			try{
+
+
+
+
+
 				database.insert(step, distance, calories);
+
 			}catch (Exception e){e.getMessage();}
+			StepDetector.CURRENT_SETP = 0;
+
+
 			startTime = 0;//开始时间，在按下开始按钮时初始化，在暂停后再次开始，也会初始化
 			recordingTime = 0;//当按下暂停按钮时，记录已过去的时间
 			step = 0;//步数

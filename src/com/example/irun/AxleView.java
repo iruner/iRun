@@ -1,7 +1,9 @@
 package com.example.irun;
 
-import android.content.Context;  
-import android.graphics.Canvas;  
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Canvas;
 import android.graphics.Color;  
 import android.graphics.Paint;  
 import android.util.AttributeSet;  
@@ -14,13 +16,14 @@ public class AxleView extends View {
     private String[] yStrings;//y轴上的信息  
       
     public AxleView(Context context, AttributeSet attrs) {  
-        super(context, attrs);  
-          
-        paint = new Paint();  
-        xStrings = new String[]{"周一", "周二", "周三",  
-                "周四", "周五", "周六", "周日",};  
-        yStrings = new String[]{"5000", "4000", "3000", "2000",  
-                "1000","0",};  
+        super(context, attrs);
+
+
+                paint = new Paint();
+        xStrings = new String[]{"步数", "距离", "卡路里"
+                };
+        yStrings = new String[]{"6000","5000", "4000", "3000","2000","1000","0"
+                };
     }  
       
     //左上角为原点，右为x轴方向，下为y轴方向  
