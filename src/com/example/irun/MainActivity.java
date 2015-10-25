@@ -79,10 +79,20 @@ public class MainActivity extends Activity {
 	public void onBackPressed() {
 	
 		FragmentManager fm=getFragmentManager();
+<<<<<<< HEAD
+		if(fm.getBackStackEntryCount()==0){
+			super.onBackPressed();
+		}else{
+			//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
+			MainActivity.bottomBar.setVisibility(View.VISIBLE);
+			fm.popBackStack();
+		}
+=======
 		FragmentTransaction ft=fm.beginTransaction();
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 		MainFragment.drawerLayout.closeDrawers();
 		fm.popBackStack();
+>>>>>>> origin/master
 
 	}
 	

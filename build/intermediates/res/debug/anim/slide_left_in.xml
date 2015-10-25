@@ -6,4 +6,8 @@
         android:fromXDelta="100%p"
         android:toXDelta="0" />
     
+<<<<<<< HEAD
+</set><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/anim/slide_left_in.xml -->
+=======
 </set><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/anim/slide_left_in.xml -->
+>>>>>>> origin/master

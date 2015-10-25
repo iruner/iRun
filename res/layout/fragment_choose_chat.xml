@@ -43,16 +43,24 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.50"
             android:text="添加好友" />
+
+        <Button
+            android:id="@+id/buttonDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:text="删除好友" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:layout_width="136dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="输入昵称查找好友">
-
+            android:layout_weight="0.70"
+            android:textColor = "#ff8c00"
+            android:singleLine="true"
+            android:hint="请输入ID">
             <requestFocus />
         </EditText>
 

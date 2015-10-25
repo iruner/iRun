@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="dimension" name="circleWidth"/>
@@ -7,6 +8,9 @@
     <attr format="color" name="secondColor"/>
     <attr format="integer" name="speed"/>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
+=======
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/colors.xml -->
+>>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
     <eat-comment/>
     <color name="black"> #000000</color>
     <color name="btn_bg_en">#7EA43C</color>
@@ -21,8 +25,12 @@
     <color name="red"> #FF0000</color>
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>
+<<<<<<< HEAD
     <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
+=======
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/dimens.xml -->
+>>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -42,7 +50,7 @@
     <dimen name="start_title_margin_left">10dp</dimen>
     <dimen name="title_font_size">22sp</dimen>
     <dimen name="title_margin_vertical">12dp</dimen>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/strings.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">iRun</string>
@@ -126,7 +134,7 @@
     <string name="weight_info">为计算消耗的热量(卡路里)，请入体重。</string>
     <string name="weigth">体重:</string>
     <string name="zero">0</string>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/styles.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Light">
 	   <!-- 隐藏状态栏 -->
