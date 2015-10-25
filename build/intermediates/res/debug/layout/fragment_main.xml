@@ -27,6 +27,7 @@
             android:weightSum="1">
 
 			<FrameLayout
+			    android:id="@+id/topBarLayout"
 				android:orientation="horizontal"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -40,7 +41,7 @@
 					android:layout_marginEnd="10dp"
 					android:layout_marginRight="10dp"
 					android:background="@drawable/settings"
-					android:id="@+id/button"
+					android:id="@+id/buttonOpenDrawer"
 					android:layout_gravity="right|center_vertical"
 					android:textStyle="bold"
 					android:typeface="monospace" />
@@ -251,4 +252,4 @@ android:layout_gravity="center_horizontal"
 </android.support.v4.widget.DrawerLayout>
 
 	
-<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_main.xml -->
+<!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_main.xml -->
