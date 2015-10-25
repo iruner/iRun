@@ -37,7 +37,7 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 		list.add("成就");
 		list.add("背包");
 		list.add("商店");
-		list.add("排行");
+		list.add("任务");
 		list.add("统计");
 		list.add("设置");
 		adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_string, list);
@@ -90,8 +90,21 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 //		else if(position == 4) {
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","1_POSE05");
 //		}
-		if(position == 5) {
-			
+		if(position == 4) {
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new TaskFragment());
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
+		}
+		else if(position == 5) {
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new StatisticsFragment());
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
 		}
 		else if(position == 6) {
 			FragmentManager fm = getFragmentManager();
