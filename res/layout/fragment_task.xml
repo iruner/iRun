@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    xmlns:custom="http://schemas.android.com/apk/res-auto"    
+    android:layout_width="match_parent"    
+    android:layout_height="match_parent"    
+    android:orientation="vertical">    
+    
+    <com.example.irun.RoundBarView
+        android:id="@+id/rbv1"  
+        android:layout_width="240dp"  
+        android:layout_height="240dp"  
+        android:layout_alignParentTop="true"  
+        android:layout_marginTop="20dp"  
+        android:layout_centerHorizontal="true"  
+        custom:circleWidth="15dp"  
+        custom:firstColor="#887E77"  
+        custom:secondColor="#338FCC"  
+        custom:speed="20"/>  
+              
+</LinearLayout> 
