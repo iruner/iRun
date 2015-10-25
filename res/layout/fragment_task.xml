@@ -4,16 +4,55 @@
     android:layout_height="match_parent"    
     android:orientation="vertical">    
     
+    <LinearLayout 
+        android:layout_width="match_parent"    
+    	android:layout_height="wrap_content" 
+    	android:orientation="horizontal"
+    	android:layout_marginTop="30dp" >
+        
+       <TextView 
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"    
+        android:textSize="30dp"
+        android:text="当前步数：" />
+       
+       <TextView 
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="0"
+        android:id="@+id/tvNow" />    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"    
+    	android:layout_height="wrap_content" 
+    	android:orientation="horizontal"
+    	android:layout_marginTop="40dp" >
+        
+       <TextView 
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"    
+        android:textSize="30dp"
+        android:text="目标步数：" />
+       
+       <TextView 
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="0"
+        android:id="@+id/tvTarget" />    
+    </LinearLayout>
+    
     <com.example.irun.RoundBarView
         android:id="@+id/rbv1"  
-        android:layout_width="240dp"  
-        android:layout_height="240dp"  
-        android:layout_alignParentTop="true"  
-        android:layout_marginTop="20dp"  
-        android:layout_centerHorizontal="true"  
-        custom:circleWidth="15dp"  
+        android:layout_width="300dp"  
+        android:layout_height="300dp"   
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="100dp"
+        custom:circleWidth="20dp"  
         custom:firstColor="#887E77"  
         custom:secondColor="#338FCC"  
-        custom:speed="20"/>  
+        custom:speed="10"/>  
               
 </LinearLayout> 

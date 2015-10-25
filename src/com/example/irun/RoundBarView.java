@@ -51,7 +51,8 @@ public class RoundBarView extends View {
         paint.setColor(firstColor); // 设置圆环的颜色    
         canvas.drawCircle(centre, centre, radius, paint); // 画出圆环    
         paint.setColor(secondColor); // 设置圆环的颜色    
-        canvas.drawArc(oval, -90, progress, false, paint); // 根据进度画圆弧   
+        canvas.drawArc(oval, -90, progress, false, paint); // 根据进度画圆弧
+        
     }  
       
     public void start(final int targetProgress)  
