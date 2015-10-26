@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class StatisticsFragment extends Fragment {
 
@@ -30,18 +31,18 @@ public class StatisticsFragment extends Fragment {
 		View view = inflater.inflate(R.layout.fragment_statistics, container, false);
 
         values[0]=values[1]=values[2]=1000;
-//½øÐÐÊý¾Ý¿â²Ù×÷
-   Float step,distance,calories;
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½
+   float step,distance,calories;
         step=distance=calories=0F;
         try{
             SQLiteDatabase db = SQLiteDatabase.openOrCreateDatabase("/data/data/com.example.irun/db.db", null);
 
             Cursor cursor = db.query ("record",null,null,null,null,null,null);
             if(cursor.moveToFirst()) {
-//±éÀúÓÎ±ê
+//ï¿½ï¿½ï¿½ï¿½ï¿½Î±ï¿½
                 for (int i = 0; i < cursor.getCount() + 1; i++) {
 
-//»ñµÃID
+//ï¿½ï¿½ï¿½ID
                     //     int id = cursor.getInt(0);
 
                     step =step+ cursor.getFloat(1);
@@ -51,11 +52,12 @@ public class StatisticsFragment extends Fragment {
                     cursor.move(1);
                 }}}catch (Exception e){e.getMessage();}
 
-        values[0]=Float.floatToIntBits(step);
 
-        values[1]=Float.floatToIntBits(distance);
 
-        values[2]=Float.floatToIntBits(calories);
+        values[0] = (int)step;
+        values[1] = (int)distance;
+        values[2] = (int)calories;
+
 
 
 
