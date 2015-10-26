@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 	public void onBackPressed() {
 	
 		FragmentManager fm=getFragmentManager();
-<<<<<<< HEAD
+
 		if(fm.getBackStackEntryCount()==0){
 			super.onBackPressed();
 		}else{
@@ -87,12 +87,12 @@ public class MainActivity extends Activity {
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
-=======
+
 		FragmentTransaction ft=fm.beginTransaction();
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 		MainFragment.drawerLayout.closeDrawers();
 		fm.popBackStack();
->>>>>>> origin/master
+
 
 	}
 	

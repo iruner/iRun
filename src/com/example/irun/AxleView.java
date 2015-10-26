@@ -20,7 +20,7 @@ public class AxleView extends View {
 
 
                 paint = new Paint();
-        xStrings = new String[]{"步数", "距离", "卡路里"
+        xStrings = new String[]{"步数/步", "距离/KM", "卡路里/KCAL"
                 };
         yStrings = new String[]{"6000","5000", "4000", "3000","2000","1000","0"
                 };
