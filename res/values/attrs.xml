@@ -10,5 +10,16 @@
         <attr name="secondColor" />    
         <attr name="circleWidth" />    
         <attr name="speed" />    
-    </declare-styleable>   
+    </declare-styleable>
+    
+    <attr name="borderRadius" format="dimension" />    
+    <attr name="type">    
+        <enum name="circle" value="0" />    
+        <enum name="round" value="1" />    
+    </attr>    
+      
+    <declare-styleable name="RoundImageViewByXfermode">    
+        <attr name="borderRadius" />    
+        <attr name="type" />    
+    </declare-styleable> 
 </resources>

@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/attrs.xml -->
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
+>>>>>>> origin/master
     <eat-comment/>
     <attr format="dimension" name="circleWidth"/>
     <attr format="color" name="firstColor"/>
     <attr format="color" name="secondColor"/>
     <attr format="integer" name="speed"/>
+<<<<<<< HEAD
+=======
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/colors.xml -->
+>>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
+>>>>>>> origin/master
     <eat-comment/>
     <color name="black"> #000000</color>
     <color name="btn_bg_en">#7EA43C</color>
@@ -22,7 +39,17 @@
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>
     <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
+=======
+<<<<<<< HEAD
+    <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/dimens.xml -->
+>>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
+>>>>>>> origin/master
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

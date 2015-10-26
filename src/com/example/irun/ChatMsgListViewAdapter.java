@@ -43,10 +43,10 @@ public class ChatMsgListViewAdapter extends BaseAdapter {
 		
 		//if(convertView == null) {
 			if(chatMsgEntity.getMsgType()) {
-				convertView = layoutInflater.inflate(R.layout.list_chat_left, null);
+				convertView = layoutInflater.inflate(R.layout.list_chat_right, null);
 			}
 			else {
-				convertView = layoutInflater.inflate(R.layout.list_chat_right, null);
+				convertView = layoutInflater.inflate(R.layout.list_chat_left, null);
 			}
 			
 			viewHolder = new ViewHolder();  
