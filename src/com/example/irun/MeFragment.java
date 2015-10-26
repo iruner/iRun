@@ -24,7 +24,6 @@ public class MeFragment extends Fragment implements OnClickListener {
 
     private TableRow tr1;
     private TableRow tr2;
-    private TableRow tr4;
 
 
     @Override
@@ -32,12 +31,11 @@ public class MeFragment extends Fragment implements OnClickListener {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_me, container, false);
 
+        tr1 = (TableRow) view.findViewById(R.id.row_weather);
+        tr2 = (TableRow) view.findViewById(R.id.row_psn_info);
 
-        tr1 = (TableRow) view.findViewById(R.id.more_page_row1);
-        tr2 = (TableRow) view.findViewById(R.id.more_page_row2);
-        tr4 = (TableRow) view.findViewById(R.id.more_page_row11);
-
-        tr4.setOnClickListener(this);
+        tr1.setOnClickListener(this);
+        tr2.setOnClickListener(this);
 
         return view;
     }
@@ -46,15 +44,25 @@ public class MeFragment extends Fragment implements OnClickListener {
         FragmentManager fm=getFragmentManager();
         FragmentTransaction ft=fm.beginTransaction();
         switch(v.getId()){
-            case R.id.more_page_row1:
+            case R.id.row_psn_info:{
+                MainActivity.bottomBar.setVisibility(View.GONE);
+                ft.hide(this);
+                ft.add(R.id.content, new PsnInfoFragment(), "PsnInfoFragment");
+                ft.addToBackStack(null);
+                ft.commit();
+            }
                 break;
-            case R.id.more_page_row11:
+            case R.id.row_weather:{
                 MainActivity.bottomBar.setVisibility(View.GONE);
                 ft.hide(this);
                 //锟斤拷R.id.*锟斤拷锟节碉拷layout锟斤拷锟斤拷Fragment锟斤拷new **()锟斤拷指锟斤拷牟锟斤拷锟�**
                 ft.add(R.id.content, new WeatherFragment(), "WeatherFragment");
                 ft.addToBackStack(null);
                 ft.commit();
+            }
+                break;
+
+            default:
                 break;
         }
     }

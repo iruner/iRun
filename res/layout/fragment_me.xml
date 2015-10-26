@@ -181,11 +181,11 @@
 						android:stretchColumns="0" >
 
 						<TableRow
-							android:id="@+id/more_page_row1"
+							android:id="@+id/row_psn_info"
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="@drawable/tab_background"
+							android:background="@drawable/me_selector"
 							android:clickable="true"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
@@ -212,11 +212,12 @@
 						</TableRow>
 
 						<TableRow
-							android:id="@+id/more_page_row2"
+							android:id="@+id/row_step"
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
 							android:background="@drawable/tab_background"
+							android:clickable="true"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -287,13 +288,15 @@
 						android:stretchColumns="0" >
 
 						<TableRow
-							android:id="@+id/more_page_row11"
+							android:id="@+id/row_weather"
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
+							android:clickable="true"
+
 							android:paddingBottom="16.0dip"
-							android:paddingTop="16.0dip" >
+							android:paddingTop="16.0dip" ><!--android:background="#f0f9ff"-->
 
 							<TextView
 								android:layout_width="wrap_content"
@@ -337,11 +340,13 @@
 								android:textSize="16.0sp"
 								android:id="@+id/sound_set" />
 
-							<Switch
+							<CheckBox
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:id="@+id/switch1"
-								android:checked="true" />
+								android:id="@+id/checkBox"
+								android:layout_column="1"
+								android:checked="false" />
+
 						</TableRow>
 
 						<TableRow

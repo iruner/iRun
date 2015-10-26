@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#be7760"
+        android:clickable="true" >
+
+        <ImageButton
+            android:layout_width="@dimen/icon_top"
+            android:layout_height="@dimen/icon_top"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/presence_online"
+            android:id="@+id/summit_settings"
+            android:layout_gravity="right|top"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="修改资料"
+            android:id="@+id/textView23"
+            android:layout_gravity="center"
+            android:autoText="false"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ac8f89" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="1.0dip"
+        android:shrinkColumns="0"
+        android:stretchColumns="0" >
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="头像"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp"
+                    android:id="@+id/textView27"
+                    android:layout_gravity="bottom" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/imageView3"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/head" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="昵称"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="iRuner"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@drawable/me_settings_selector"
+            android:clickable="true"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="宣言"
+                    android:textColor="@color/btn_bg_unen"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="这家伙很懒，什么也没留下"
+                    android:id="@+id/textView12"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="年龄"
+                    android:id="@+id/textView13"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="20"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="性别"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp"
+                    android:id="@+id/textView14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="男"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="身高"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp"
+                    android:id="@+id/textView24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="172cm"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="体重"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp"
+                    android:id="@+id/textView25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="62kg"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:background="@color/light_grey"
+            android:paddingBottom="16.0dip"
+            android:paddingTop="16.0dip"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="目标"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp"
+                    android:id="@+id/textView26" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="7000m"
+                    android:textColor="@color/darkgrey"
+                    android:editable="true" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingRight="20.0dip" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

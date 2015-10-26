@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/attrs.xml -->
-=======
-<<<<<<< HEAD
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
->>>>>>> origin/master
     <eat-comment/>
+    <attr format="dimension" name="borderRadius"/>
     <attr format="dimension" name="circleWidth"/>
     <attr format="color" name="firstColor"/>
     <attr format="color" name="secondColor"/>
     <attr format="integer" name="speed"/>
-<<<<<<< HEAD
-=======
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
-=======
->>>>>>> origin/master
+    <attr name="type">    
+        <enum name="circle" value="0"/>    
+        <enum name="round" value="1"/>    
+    </attr>
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/colors.xml -->
->>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
     <eat-comment/>
     <color name="black"> #000000</color>
     <color name="btn_bg_en">#7EA43C</color>
@@ -32,16 +26,9 @@
     <color name="red"> #FF0000</color>
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>
-<<<<<<< HEAD
     <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
-=======
-<<<<<<< HEAD
-    <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
-=======
->>>>>>> origin/master
+    <declare-styleable name="RoundImageViewByXfermode"><attr name="borderRadius"/><attr name="type"/></declare-styleable>
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/dimens.xml -->
->>>>>>> 034d3b1db620b4071d1d9966c23a85504727a9db
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -150,7 +137,7 @@
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Light">
 	   <!-- 隐藏状态栏 -->
-	   <item name="android:windowFullscreen">true</item>
+	   <!--<item name="android:windowFullscreen">true</item>-->
 	   <!-- 隐藏标题栏 -->
 	   <item name="android:windowNoTitle">true</item>
     </style>

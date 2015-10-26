@@ -85,6 +85,7 @@ public class MainActivity extends Activity {
 			startActivity(intent);
 		}else{
 			//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
+			if(fm.getBackStackEntryCount()==1)
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
