@@ -78,7 +78,10 @@ public class MainActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		FragmentManager fm=getFragmentManager();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 		if(fm.getBackStackEntryCount()==0){
 			Intent intent = new Intent();
 			intent.setAction(Intent.ACTION_MAIN);
@@ -86,9 +89,11 @@ public class MainActivity extends Activity {
 			startActivity(intent);
 		}else{
 			//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
+			if(fm.getBackStackEntryCount()==1)
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
+<<<<<<< HEAD
 
 
 		FragmentTransaction ft=fm.beginTransaction();
@@ -98,6 +103,13 @@ public class MainActivity extends Activity {
 
 
 
+=======
+
+//		FragmentTransaction ft=fm.beginTransaction();
+//		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+//		MainFragment.drawerLayout.closeDrawers();
+//		fm.popBackStack();
+>>>>>>> origin/master
 	}
 	
 	private void setFragmentShow(int index)
