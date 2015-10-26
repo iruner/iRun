@@ -94,9 +94,6 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		         }
 			}
 		}
-		
-		
-		
 	}
 
 	@Override

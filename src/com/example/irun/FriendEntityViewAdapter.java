@@ -2,9 +2,12 @@ package com.example.irun;
 
 import java.util.List;
 
+import android.R.integer;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
