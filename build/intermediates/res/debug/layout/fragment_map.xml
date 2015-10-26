@@ -10,41 +10,47 @@
         android:layout_height="match_parent" >
     </com.amap.api.maps2d.MapView>
 
-    <RadioGroup
-        android:id="@+id/routegroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/transparent"
-        android:orientation="horizontal" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-
-
-        <RadioButton
-            android:id="@+id/route1"
+        <RadioGroup
+            android:id="@+id/routegroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:text="路线1"
-            android:textColor="@android:color/black" />
-        <RadioButton
-            android:id="@+id/route2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:text="路线2"
-            android:textColor="@android:color/black" />
-        <RadioButton
-            android:id="@+id/route3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:text="路线3"
-            android:textColor="@android:color/black" />
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal" >
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/route1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey"
+                android:text="路线1"
+                android:textColor="@android:color/black" />
+            <RadioButton
+                android:id="@+id/route2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:background="@color/light_grey"
+                android:text="路线2"
+                android:textColor="@android:color/black" />
+            <RadioButton
+                android:id="@+id/route3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:background="@color/light_grey"
+                android:text="路线3"
+                android:textColor="@android:color/black" />
+
+        </RadioGroup>
+    </LinearLayout>
 
 
 </FrameLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_map.xml -->

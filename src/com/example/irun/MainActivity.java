@@ -78,10 +78,7 @@ public class MainActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		FragmentManager fm=getFragmentManager();
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 		if(fm.getBackStackEntryCount()==0){
 			Intent intent = new Intent();
 			intent.setAction(Intent.ACTION_MAIN);
@@ -92,7 +89,7 @@ public class MainActivity extends Activity {
 			MainActivity.bottomBar.setVisibility(View.VISIBLE);
 			fm.popBackStack();
 		}
-<<<<<<< HEAD
+
 
 		FragmentTransaction ft=fm.beginTransaction();
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
@@ -100,8 +97,7 @@ public class MainActivity extends Activity {
 		fm.popBackStack();
 
 
-=======
->>>>>>> origin/master
+
 	}
 	
 	private void setFragmentShow(int index)
