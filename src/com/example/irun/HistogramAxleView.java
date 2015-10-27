@@ -24,8 +24,8 @@ public class HistogramAxleView extends View {
     private int height;
     
     //柱状条的属性
-    private int total = 100;//整条的数值  
-    private int startValue = 0;//y轴起始值
+    private int total = 1000;//整条的数值  
+//    private int startValue = 0;//y轴起始值
     
     private int[] targetHeight = new int[3];//目标的高度   
     private int[] target = new int[3];//目标的数值  
@@ -38,19 +38,19 @@ public class HistogramAxleView extends View {
     //供外部调用 
     public void show(int[] targetValue) {
     	
-    	int max = 0;
+//    	int max = 0;
 		for (int i = 0; i < targetValue.length; i++) {
 			target[i] = targetValue[i];
 			
-			if(i >= 1) {
-				max = Math.max(target[i], target[i-1]);
-			}
+//			if(i >= 1) {
+//				max = Math.max(target[i], target[i-1]);
+//			}
 		}
 		
-		startValue = max / 100 * 100;
-		yStrings = new String[]{startValue + 100 + "", startValue + 80 + "", 
-				startValue + 60 + "", startValue + 40 + "", 
-				startValue + 20 + "", startValue + 0 + ""};
+//		startValue = max / 100 * 100;
+//		yStrings = new String[]{startValue + 100 + "", startValue + 80 + "", 
+//				startValue + 60 + "", startValue + 40 + "", 
+//				startValue + 20 + "", startValue + 0 + ""};
 		
 		HistogramAnimation ha = new HistogramAnimation();
 		ha.setDuration(3000);
@@ -62,7 +62,7 @@ public class HistogramAxleView extends View {
 
         paint = new Paint();
         xStrings = new String[]{"步数/步", "距离/KM", "卡路里/KCAL"};
-        
+        yStrings = new String[]{"1000", "800", "600", "400", "200", "0"};
         bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.column);  
     }  
 
@@ -125,10 +125,12 @@ public class HistogramAxleView extends View {
               
             for (int i = 0; i < target.length; i++) {
             	
-            	if (target[i] > startValue) {
-            		targetHeight[i] = (int) ((target[i] - startValue) * height / total);
-				}
-            		
+//            	if (target[i] > startValue) {
+//            		targetHeight[i] = (int) ((target[i] - startValue) * height / total);
+//				}
+            	
+            	targetHeight[i] = (int) (target[i] * height / total);
+            	
             	//interpolatedTime取值0-1，代表动画进度  
                 now[i] = (int)(target[i] * interpolatedTime);  
                 nowHeight[i] = (int)(targetHeight[i] * interpolatedTime); 
