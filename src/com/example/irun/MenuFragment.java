@@ -91,26 +91,25 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","1_POSE05");
 //		}
 		if(position == 4) {
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.content, new TaskFragment());
-			ft.hide(fm.findFragmentByTag("MainFragment"));
-			ft.addToBackStack(null);
-			ft.commit();
+			toOtherFragment(new TaskFragment());
 		}
 		else if(position == 5) {
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.content, new StatisticsFragment());
-			ft.hide(fm.findFragmentByTag("MainFragment"));
-			ft.addToBackStack(null);
-			ft.commit();
+			toOtherFragment(new StatisticsFragment());
 		}
 		else if(position == 6) {
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.content, new StepSettingFragment());
-			ft.commit();
+			toOtherFragment(new StepSettingFragment());
 		}
+	}
+	
+	private void toOtherFragment(Fragment f) 
+	{
+		MainActivity.bottomBar.setVisibility(View.GONE);
+		
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		ft.add(R.id.content, f);
+		ft.hide(fm.findFragmentByTag("MainFragment"));
+		ft.addToBackStack(null);
+		ft.commit();
 	}
 }

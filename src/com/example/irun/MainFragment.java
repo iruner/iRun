@@ -174,11 +174,6 @@ public class MainFragment extends Fragment implements OnClickListener {
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
-
-
-
-
-
 				database.insert(step, distance, calories);
 
 			}catch (Exception e){e.getMessage();}
