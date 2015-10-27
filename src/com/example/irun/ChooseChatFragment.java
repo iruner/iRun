@@ -17,13 +17,15 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
 //选择聊天模式的界面，分为群聊和一对一聊天
-public class ChooseChatFragment extends Fragment implements OnClickListener,OnItemClickListener{
+public class ChooseChatFragment extends Fragment implements OnClickListener,OnChildClickListener {
 	
 	private TextView textTitle;
 	private EditText editText;
@@ -31,9 +33,10 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 	private Button buttonGroup;
 	private Button buttonDel;
 	
-	private ListView listView;
-	private FriendEntityViewAdapter adapter;
-	private List<FriendEntity> list;
+	private ExpandableListView elv;  
+    private ExpandableAdapter ea;  
+    private List<String> group;//存分组的名字
+    private List<List<String>> child;//存id
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,17 +49,36 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		buttonGroup = (Button)view.findViewById(R.id.buttonGroup);
 		buttonDel = (Button)view.findViewById(R.id.buttonDel);
 
-		listView = (ListView)view.findViewById(R.id.listview);
+		elv = (ExpandableListView) view.findViewById(R.id.elv);
 		
 		textTitle.setText(UserInfo.getId() + "的通讯录");
 		buttonAdd.setOnClickListener(this);
 		buttonGroup.setOnClickListener(this);
 		buttonDel.setOnClickListener(this);
-		listView.setOnItemClickListener(this);
+		elv.setOnChildClickListener(this);
 		
-		list = new ArrayList<FriendEntity>();
-		adapter = new FriendEntityViewAdapter(getActivity(), list);
-		listView.setAdapter(adapter);
+		
+		group = new ArrayList<String>();  
+        child = new ArrayList<List<String>>();  
+          
+        group.add("默认分组");  
+        group.add("小学同学");  
+        group.add("初中同学");  
+        group.add("高中同学");  
+        group.add("大学同学");  
+          
+        for (int i = 0; i < group.size(); i++)   
+        {  
+            List<String> tempList = new ArrayList<String>();  
+            for (int j = 0; j < 3; j++) {  
+                tempList.add(group.get(i) + j);  
+            }  
+            child.add(tempList);  
+        }
+        
+		ea = new ExpandableAdapter(getActivity(), group, child);  
+        elv.setAdapter(ea);
+		elv.setGroupIndicator(null);//不设置大组指示器图标
 		
 		return view;
 	}
@@ -68,13 +90,8 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		{
 			if(editText.getText().toString().length() > 0)
 			{
-				FriendEntity fe = new FriendEntity();
-				fe.setID(editText.getText().toString());
-				
-				list.add(fe);
-				adapter.notifyDataSetChanged();//通知ListView，数据已发生改变
-				listView.setSelection(listView.getCount() - 1);//发送一条消息时，ListView显示选择最后一项
-				
+				child.get(0).add(editText.getText().toString());
+				ea.notifyDataSetChanged();
 				editText.setText("");
 			}		
 		}
@@ -84,25 +101,18 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		}
 		else if(v.getId() == R.id.buttonDel)
 		{		
-			for (int i = 0; i < list.size(); i++) 
+			for (int i = 0; i < child.get(0).size(); i++) 
 			{
-		         if(list.get(i).getID().equalsIgnoreCase(editText.getText().toString()))
+		         if(child.get(0).get(i).equalsIgnoreCase(editText.getText().toString()))
 		         {
-			        list.remove(list.get(i));
-			        adapter.notifyDataSetChanged();
+		        	child.get(0).remove(i);
+			        ea.notifyDataSetChanged();
 		            editText.setText(""); 	
 		         }
 			}
 		}
 	}
 
-	@Override
-	public void onItemClick(AdapterView<?> parent, View view, int position,
-			long id) 
-	{
-		toChatFragment(list.get(position).getID());
-	}
-	
 	private void toChatFragment(String tag)
 	{
 		MainActivity.bottomBar.setVisibility(View.GONE);
@@ -123,5 +133,12 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnIt
 		}        
 		ft.addToBackStack(null);
 		ft.commit();
+	}
+
+	@Override
+	public boolean onChildClick(ExpandableListView parent, View v,
+			int groupPosition, int childPosition, long id) {
+		toChatFragment(child.get(groupPosition).get(childPosition));
+		return true;
 	}
 }
