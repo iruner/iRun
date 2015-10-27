@@ -13,7 +13,7 @@ public class TaskFragment extends Fragment {
 	private TextView tvTarget;
 	private RoundBarView roundBarView;
 	
-	private float now = 3300;
+	private float now = 2400;
 	private float target = 3500;
 	
 	@Override

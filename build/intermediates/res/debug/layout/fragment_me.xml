@@ -128,7 +128,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="@drawable/me_selector"
+							android:background="@drawable/tab_background"
 							android:clickable="true"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
@@ -159,8 +159,15 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
+<<<<<<< HEAD
 							android:background="@drawable/me_selector"
+=======
+							android:background="@drawable/tab_background"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 							android:clickable="true"
+>>>>>>> origin/master
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -438,4 +445,8 @@
 	</ScrollView>
 
 
+<<<<<<< HEAD
+</LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_me.xml -->
+=======
 </LinearLayout><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_me.xml -->
+>>>>>>> origin/master

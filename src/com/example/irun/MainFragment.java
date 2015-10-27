@@ -178,7 +178,10 @@ public class MainFragment extends Fragment implements OnClickListener {
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
+<<<<<<< HEAD
 				buttonStart.setVisibility(ImageView.VISIBLE);
+=======
+>>>>>>> origin/master
 				database.insert(step, distance, calories);
 
 			}catch (Exception e){e.getMessage();}

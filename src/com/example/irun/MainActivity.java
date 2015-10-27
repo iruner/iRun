@@ -90,10 +90,17 @@ public class MainActivity extends Activity {
 			fm.popBackStack();
 		}
 
+		FragmentTransaction ft=fm.beginTransaction();
+		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+		MainFragment.drawerLayout.closeDrawers();
+		fm.popBackStack();
+
+
 //		FragmentTransaction ft=fm.beginTransaction();
 //		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 //		MainFragment.drawerLayout.closeDrawers();
 //		fm.popBackStack();
+
 	}
 	
 	private void setFragmentShow(int index)

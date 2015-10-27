@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
+    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
+=======
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/attrs.xml -->
+>>>>>>> origin/master
     <eat-comment/>
     <attr format="dimension" name="borderRadius"/>
     <attr format="dimension" name="circleWidth"/>
@@ -11,7 +15,11 @@
         <enum name="circle" value="0"/>    
         <enum name="round" value="1"/>    
     </attr>
+<<<<<<< HEAD
+    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
+=======
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/colors.xml -->
+>>>>>>> origin/master
     <eat-comment/>
     <color name="bar_green">#62cac9</color>
     <color name="black"> #000000</color>
@@ -32,7 +40,11 @@
     <color name="white"> #FFFFFF</color>
     <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
     <declare-styleable name="RoundImageViewByXfermode"><attr name="borderRadius"/><attr name="type"/></declare-styleable>
+<<<<<<< HEAD
+    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
+=======
     <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/dimens.xml -->
+>>>>>>> origin/master
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>

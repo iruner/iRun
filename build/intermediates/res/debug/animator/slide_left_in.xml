@@ -5,4 +5,8 @@
     android:valueTo="0" 
     android:valueType="floatType" 
     android:propertyName="X" 
+<<<<<<< HEAD
+    android:duration="300" /><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/animator/slide_left_in.xml -->
+=======
     android:duration="300" /><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/animator/slide_left_in.xml -->
+>>>>>>> origin/master
