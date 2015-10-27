@@ -33,13 +33,13 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 		
 		drawerList = (ListView) view.findViewById(R.id.drawerList);
 		list = new ArrayList<String>();	
-		list.add("签到");
-		list.add("成就");
-		list.add("背包");
-		list.add("商店");
-		list.add("任务");
+		list.add("账户");
+		list.add("目标");
+		list.add("天气");
+		list.add("反馈");
 		list.add("统计");
 		list.add("设置");
+		list.add("退出");
 		adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_string, list);
 		drawerList.setAdapter(adapter);
 		drawerList.setOnItemClickListener(this);
@@ -90,6 +90,51 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 //		else if(position == 4) {
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","1_POSE05");
 //		}
+<<<<<<< HEAD
+		if(position == 0) {
+			MainActivity.bottomBar.setVisibility(View.GONE);
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new PsnInfoFragment());
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
+		}
+		if(position == 1) {
+			MainActivity.bottomBar.setVisibility(View.GONE);
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new TaskFragment());
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
+		}
+		if(position == 2) {
+			MainActivity.bottomBar.setVisibility(View.GONE);
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new WeatherFragment(), "WeatherFragment");
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
+		}
+		else if(position == 4) {
+			MainActivity.bottomBar.setVisibility(View.GONE);
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new StatisticsFragment());
+			ft.hide(fm.findFragmentByTag("MainFragment"));
+			ft.addToBackStack(null);
+			ft.commit();
+		}
+		else if(position == 5) {
+			MainActivity.bottomBar.setVisibility(View.GONE);
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ft.add(R.id.content, new StepSettingFragment());
+			ft.addToBackStack(null);
+			ft.commit();
+=======
 		if(position == 4) {
 			toOtherFragment(new TaskFragment());
 		}
@@ -98,6 +143,10 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 		}
 		else if(position == 6) {
 			toOtherFragment(new StepSettingFragment());
+>>>>>>> origin/master
+		}
+		else if(position == 6) {
+
 		}
 	}
 	

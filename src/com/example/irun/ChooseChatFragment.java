@@ -51,7 +51,8 @@ public class ChooseChatFragment extends Fragment implements OnClickListener,OnCh
 
 		elv = (ExpandableListView) view.findViewById(R.id.elv);
 		
-		textTitle.setText(UserInfo.getId() + "的通讯录");
+//		textTitle.setText(UserInfo.getId() + "的通讯录");
+		textTitle.setText("Chatting Room");
 		buttonAdd.setOnClickListener(this);
 		buttonGroup.setOnClickListener(this);
 		buttonDel.setOnClickListener(this);

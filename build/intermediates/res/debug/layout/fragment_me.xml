@@ -3,35 +3,14 @@
     android:id="@+id/ly_main_weixin"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#fcfcfc"
+    android:background="#fffffff7"
     android:orientation="vertical" >
 
 	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="#ac8f89">
-
-		<FrameLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:paddingTop="5dp"
-			android:paddingBottom="5dp"
-			android:background="#be7760"
-			android:clickable="true">
-
-			<Button
-				android:layout_width="@dimen/icon_top"
-				android:layout_height="@dimen/icon_top"
-				android:adjustViewBounds="true"
-				android:layout_marginEnd="10dp"
-				android:layout_marginRight="10dp"
-				android:background="@drawable/settings"
-				android:id="@+id/Settings"
-				android:layout_gravity="right|top"
-				android:typeface="monospace" />
-
-		</FrameLayout>
+		android:background="@color/bar_green">
 
 		<LinearLayout
 			android:orientation="horizontal"
@@ -41,7 +20,7 @@
 			<ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-				android:layout_marginLeft="5dp"
+				android:layout_marginLeft="10dp"
 				android:layout_marginTop="5dp"
 				android:layout_marginBottom="5dp"
                 android:id="@+id/imageView"
@@ -76,17 +55,11 @@
 						android:layout_height="match_parent"
 						android:layout_weight="1">
 
-						<Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="31dp"
-                            android:text="Height"
-                            android:id="@+id/button5"
-							android:textColor="@android:color/background_light" />
-
 						<TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="172cm"
+							android:layout_marginLeft="10dp"
 							android:singleLine="true"
                             android:id="@+id/textView"
                             android:layout_gravity="center_vertical"
@@ -99,46 +72,16 @@
 						android:layout_height="match_parent"
 						android:layout_weight="1">
 
-						<Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="31dp"
-                            android:text="Weight"
-                            android:id="@+id/button6"
-							android:textColor="@android:color/background_light" />
-
 						<TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="56kg"
+							android:padding="5dp"
 							android:singleLine="true"
                             android:id="@+id/textView2"
                             android:layout_gravity="center_vertical"
 							android:textColor="@android:color/white" />
 
-					</LinearLayout>
-
-					<LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-						android:layout_weight="1"
-						>
-
-						<Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="31dp"
-                            android:text="Goal"
-                            android:id="@+id/button7"
-							android:textColor="@android:color/background_light" />
-
-						<TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="7000m"
-							android:singleLine="true"
-                            android:id="@+id/textView3"
-                            android:layout_gravity="center_vertical"
-							android:textColor="@android:color/white" />
 					</LinearLayout>
 
 				</LinearLayout>
@@ -216,7 +159,16 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
+<<<<<<< HEAD
+							android:background="@drawable/me_selector"
+=======
 							android:background="@drawable/tab_background"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+>>>>>>> 60106a58cef5dadbe9e0c886a8bcd2b01518658d
 							android:clickable="true"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
@@ -247,7 +199,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -324,7 +276,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -354,7 +306,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -400,7 +352,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -430,7 +382,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 
@@ -460,7 +412,7 @@
 							android:layout_width="fill_parent"
 							android:layout_marginLeft="2.0dip"
 							android:layout_marginRight="2.0dip"
-							android:background="#f0f9ff"
+							android:background="@drawable/me_selector"
 							android:paddingBottom="16.0dip"
 							android:paddingTop="16.0dip" >
 

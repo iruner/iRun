@@ -59,7 +59,8 @@ public class ChatFragment extends Fragment implements
 	private int pageItemCount = 12;//每页12个表情
 	private String toID;//表示跟谁聊天的窗口
 	private MessageReceiver messageReceiver;//接受监听的对象
-	
+
+
 	public ChatFragment(String toID)
 	{
 		this.toID = toID;
@@ -74,7 +75,7 @@ public class ChatFragment extends Fragment implements
 		sendButton = (Button)view.findViewById(R.id.btn_send);
 		backButton = (Button)view.findViewById(R.id.btn_back);
 		faceButton = (Button)view.findViewById(R.id.btn_face);
-		titleText = (TextView)view.findViewById(R.id.title);
+		titleText = (TextView)view.findViewById(R.id.chat_title);
 		
 		listView = (ListView)view.findViewById(R.id.listview);
 		viewPager = (ViewPager)view.findViewById(R.id.viewPage);

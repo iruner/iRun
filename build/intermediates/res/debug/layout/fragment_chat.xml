@@ -2,36 +2,47 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#f0f0e0" >
+    android:background="@color/white" >
 
     <RelativeLayout
-        android:id="@+id/rl_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:padding="0dp"
-        android:background="@drawable/mmtitle_bg" >
+        android:id="@+id/frameLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/bar_green" >
 
         <Button
-            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
             android:layout_marginLeft="2dp"
-            android:background="@drawable/selector_btn_back"
-            android:text=" 返回 "
-            android:textColor="#ffffff"
-            android:textSize="15sp" />
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back"
+            android:id="@+id/btn_back"
+            android:layout_gravity="right|center_vertical"
+            android:textStyle="bold"
+            android:typeface="monospace" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/chat_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="聊天中..."
+            android:text="Chatting..."
             android:textColor="#ffffff"
             android:textSize="20.0sp" />
-
     </RelativeLayout>
+
+    <!--可以自定义标题栏样式-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_layout"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:padding="0dp"-->
+        <!--android:background="@drawable/mmtitle_bg" >-->
+    <!--</RelativeLayout>-->
 
     <ListView
         android:id="@+id/listview"
@@ -44,8 +55,9 @@
         android:id="@+id/rl_bottom"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/layout_bg1" >
+
+        android:background="@color/bar_green" >
+        <!--android:layout_alignParentBottom="true"-->
 
         <Button
             android:id="@+id/btn_face"
@@ -54,7 +66,10 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:text="表情" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:text="表情"
+            android:layout_gravity="bottom" />
         
         <Button
             android:id="@+id/btn_send"
@@ -69,12 +84,14 @@
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:layout_weight="1"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/btn_send"
-            android:layout_toRightOf="@id/btn_face"
-            android:background="@drawable/edittext1" />
+            android:background="@drawable/edittext1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:layout_toRightOf="@+id/btn_face"
+            android:layout_toEndOf="@+id/btn_face" />
     </RelativeLayout>
    
     <android.support.v4.view.ViewPager
@@ -83,5 +100,10 @@
 	    android:layout_height="180dp"   
 	    android:visibility="gone">   "
     </android.support.v4.view.ViewPager>
+<<<<<<< HEAD
     
 </LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_chat.xml -->
+=======
+
+</LinearLayout><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_chat.xml -->
+>>>>>>> 60106a58cef5dadbe9e0c886a8bcd2b01518658d

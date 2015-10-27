@@ -13,7 +13,10 @@
     </attr>
     <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
     <eat-comment/>
+    <color name="bar_green">#62cac9</color>
     <color name="black"> #000000</color>
+    <color name="brown">#be7760</color>
+    <color name="btm_blue">#00a0e9</color>
     <color name="btn_bg_en">#7EA43C</color>
     <color name="btn_bg_pressed">#A82E26</color>
     <color name="btn_bg_unen">#484848</color>
@@ -23,6 +26,7 @@
     <color name="grey"> #ebebeb</color>
     <color name="light_green">#f0f9ff</color>
     <color name="light_grey"> #fffff7</color>
+    <color name="main_blue">#00ade7</color>
     <color name="red"> #FF0000</color>
     <color name="transparent">#ffffff</color>
     <color name="white"> #FFFFFF</color>

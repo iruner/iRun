@@ -24,7 +24,7 @@
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-            android:background="@color/black"
+            android:background="@color/main_blue"
             android:weightSum="1">
 
 			<FrameLayout
@@ -34,7 +34,7 @@
 				android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-				android:background="#be7760" >
+				android:background="@color/bar_green" >
 
 				<Button
 					android:layout_width="@dimen/icon_top"
@@ -194,28 +194,42 @@
     android:id="@+id/buttonLayout"
     android:layout_width="match_parent"
     android:layout_height="50dp"
+                android:paddingLeft="10dp"
                 android:layout_marginTop="20dp"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+                android:layout_weight="0.25">
 
-    <Button
-    android:id="@+id/buttonStart"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
-    android:text="Start" />
+                <ImageButton
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                    android:background="@drawable/clear"
+                    android:layout_gravity="top" />
 
-    <Button
-    android:id="@+id/buttonPause"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Pause" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    <Button
-    android:id="@+id/buttonClear"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Clear" />
-    </LinearLayout>
+                    <ImageButton
+                    android:id="@+id/buttonPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                    android:text="Pause"
+                        android:background="@drawable/pause" />
+
+                    <ImageButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Start"
+            android:background="@drawable/play" />
+
+                </FrameLayout>
+
+            </LinearLayout>
 
             <ScrollView
                 android:layout_width="match_parent"

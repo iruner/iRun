@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 //显示模型的界面，同时还有计步器的功能
@@ -48,9 +50,9 @@ public class MainFragment extends Fragment implements OnClickListener {
 	//-----计步功能
 	
 	private Button buttonOpenDrawer;
-	private Button buttonStart;
-	private Button buttonPause;
-	private Button buttonClear;
+	private ImageButton buttonStart;
+	private ImageButton buttonPause;
+	private ImageButton buttonClear;
 	Datebase database = new Datebase();
 	public static boolean canRandom = true;//模型能否随机播放语音和动作
 	
@@ -87,9 +89,9 @@ public class MainFragment extends Fragment implements OnClickListener {
 //		ll.addView(playerView);
 		
 		buttonOpenDrawer = (Button)view.findViewById(R.id.buttonOpenDrawer);
-		buttonStart = (Button)view.findViewById(R.id.buttonStart);
-		buttonPause = (Button)view.findViewById(R.id.buttonPause);
-		buttonClear = (Button)view.findViewById(R.id.buttonClear);
+		buttonStart = (ImageButton)view.findViewById(R.id.buttonStart);
+		buttonPause = (ImageButton)view.findViewById(R.id.buttonPause);
+		buttonClear = (ImageButton)view.findViewById(R.id.buttonClear);
 		
 		buttonOpenDrawer.setOnClickListener(this);
 		buttonStart.setOnClickListener(this);
@@ -154,6 +156,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 			canRandom = false;
 			buttonStart.setEnabled(false);
 			buttonPause.setEnabled(true);
+			buttonStart.setVisibility(ImageView.GONE);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_RUN00_F");
 		}
@@ -168,12 +171,17 @@ public class MainFragment extends Fragment implements OnClickListener {
 			canRandom = true;
 			buttonStart.setEnabled(true);
 			buttonPause.setEnabled(false);
+			buttonStart.setVisibility(ImageView.VISIBLE);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","-0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_WAIT00");
 		}
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
+<<<<<<< HEAD
+				buttonStart.setVisibility(ImageView.VISIBLE);
+=======
+>>>>>>> origin/master
 				database.insert(step, distance, calories);
 
 			}catch (Exception e){e.getMessage();}
