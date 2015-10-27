@@ -11,77 +11,78 @@
         android:layout_height="0dp"
         android:layout_weight="1" >       
    	</FrameLayout>
-    
-    <RelativeLayout
-        android:id="@+id/bottomBar"
-        android:layout_width="fill_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/darkgrey"
-        android:gravity="bottom" >
 
-		//设置底下栏样式
-		//android:background="@drawable/bottom_bar"
-	    
-        <RadioGroup
+	<FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="61dp"
+        android:id="@+id/bottomBar"
+		android:background="@color/btm_blue">
+
+		<RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:paddingTop="5dp"
             android:layout_alignParentBottom="true"
-            android:id="@+id/radioGroup"
-            android:orientation="horizontal" >
-         
-            <RadioButton
-	            android:id="@+id/rb1"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_1"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp"
-	            android:checked="true" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb2"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_2"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb3"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_3"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb4"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_4"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-        </RadioGroup>
-    </RelativeLayout>
+            android:background="@color/white"
+            android:gravity="bottom"
+			android:layout_gravity="left|bottom">
+
+            //设置底下栏样式
+            //android:background="@drawable/bottom_bar"
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:button="@null"
+                    android:drawableTop="@drawable/selector_1"
+                    android:gravity="center"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:button="@null"
+                    android:drawableTop="@drawable/selector_2"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:button="@null"
+                    android:drawableTop="@drawable/selector_3"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:button="@null"
+                    android:drawableTop="@drawable/selector_4"
+                    android:gravity="center"/>
+            </RadioGroup>
+        </RelativeLayout>
+	</FrameLayout>
+
 </LinearLayout><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/activity_main.xml -->

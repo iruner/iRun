@@ -4,6 +4,10 @@
     <color name="grey"> #ebebeb</color>
     <color name="light_grey"> #fffff7</color>
     <color name="black"> #000000</color>
+    <color name="bar_green">#62cac9</color>
+    <color name="btm_blue">#00a0e9</color>
+    <color name="brown">#be7760</color>
+    <color name="main_blue">#00ade7</color>
     <color name="darkgrey"> #C0C0C0</color>
     <color name="white"> #FFFFFF</color>
     <color name="red"> #FF0000</color>

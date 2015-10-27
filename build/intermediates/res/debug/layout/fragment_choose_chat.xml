@@ -7,7 +7,8 @@
     <FrameLayout
         android:layout_width="match_parent"
     	android:layout_height="50dp"
-        android:background="#be7760"
+        android:padding="5dp"
+        android:background="@color/bar_green"
     	android:orientation="horizontal">
         
         <TextView
@@ -23,50 +24,65 @@
             android:id="@+id/buttonGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发起群聊"
-            android:layout_gravity="right"
-            android:textColor="@color/black" />
+            android:background="@drawable/brocast"
+            android:layout_gravity="right"/>
 
     </FrameLayout>
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.50"
-            android:text="添加好友" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-        <Button
-            android:id="@+id/buttonDel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.50"
-            android:text="删除好友" />
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor = "#ff8c00"
+                android:singleLine="true"
+                android:hint="请输入用户ID...">
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="136dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.70"
-            android:textColor = "#ff8c00"
-            android:singleLine="true"
-            android:hint="请输入ID">
-            <requestFocus />
-        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/light_grey"
+                android:text="删除好友"
+                android:drawableLeft="@drawable/del_conacts"/>
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/light_grey"
+                android:text="添加好友"
+                android:drawableLeft="@drawable/add_contacts"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
-    <ListView 
+
+    <ListView
         android:id="@+id/listview"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="2dp"
