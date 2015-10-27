@@ -3,4 +3,4 @@
     <item android:state_focused="true" android:drawable="@color/light_green"/>
     <item android:state_pressed="true" android:drawable="@color/light_green" />
     <item android:drawable="@color/light_grey"/>
-</selector>   <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/drawable/me_settings_selector.xml -->
+</selector>   <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/drawable/me_settings_selector.xml -->

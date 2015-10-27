@@ -123,12 +123,13 @@
                         android:textSize="16.0sp" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="iRuner"
                         android:textColor="@color/darkgrey"
-                        android:editable="true" />
+                        android:editable="true"
+                         />
                 </LinearLayout>
 
                 <ImageView
@@ -167,7 +168,7 @@
                         android:textSize="16.0sp"/>
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="这家伙很懒，什么也没留下"
@@ -213,7 +214,7 @@
                         android:textSize="16.0sp" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="20"
@@ -257,7 +258,7 @@
                         android:id="@+id/textView14" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="男"
@@ -301,12 +302,13 @@
                         android:id="@+id/textView24" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="172cm"
                         android:textColor="@color/darkgrey"
-                        android:editable="true" />
+                        android:editable="true"
+                        />
                 </LinearLayout>
 
                 <ImageView
@@ -345,7 +347,7 @@
                         android:id="@+id/textView25" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="62kg"
@@ -389,7 +391,7 @@
                         android:id="@+id/textView26" />
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="7000m"
