@@ -81,7 +81,10 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     <ListView
         android:id="@+id/listview"
         android:layout_marginTop="5dp"

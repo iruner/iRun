@@ -63,7 +63,7 @@ public class HistogramAxleView extends View {
         paint = new Paint();
         xStrings = new String[]{"步数/步", "距离/KM", "卡路里/KCAL"};
         yStrings = new String[]{"1000", "800", "600", "400", "200", "0"};
-        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.column);  
+        bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.column);  
     }  
 
     //左上角为原点，右为x轴方向，下为y轴方向  
