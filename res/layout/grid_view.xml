@@ -4,7 +4,7 @@
     android:layout_height="180dp"
     android:numColumns="6"    
     android:visibility="visible"
-    android:background="@color/grey">
+    android:background="@color/light_green">
 </GridView>
 
 

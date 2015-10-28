@@ -90,7 +90,6 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 //		else if(position == 4) {
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","1_POSE05");
 //		}
-<<<<<<< HEAD
 		if(position == 0) {
 			MainActivity.bottomBar.setVisibility(View.GONE);
 			FragmentManager fm = getFragmentManager();
@@ -134,22 +133,11 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 			ft.add(R.id.content, new StepSettingFragment());
 			ft.addToBackStack(null);
 			ft.commit();
-=======
-		if(position == 4) {
-			toOtherFragment(new TaskFragment());
 		}
-		else if(position == 5) {
-			toOtherFragment(new StatisticsFragment());
-		}
-		else if(position == 6) {
-			toOtherFragment(new StepSettingFragment());
->>>>>>> origin/master
-		}
-		else if(position == 6) {
 
-		}
 	}
-	
+
+
 	private void toOtherFragment(Fragment f) 
 	{
 		MainActivity.bottomBar.setVisibility(View.GONE);

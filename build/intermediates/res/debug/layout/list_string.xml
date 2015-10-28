@@ -2,7 +2,7 @@
 
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:textSize="30dp"
+    android:textSize="35dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
-<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/list_string.xml -->
+<!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/list_string.xml -->

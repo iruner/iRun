@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <solid android:color="#60000000" />
+    <solid android:color="@color/bar_green" />
 
     <corners android:radius="15dip" />
 
-</shape><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/drawable-ldpi/shape.xml -->
+</shape><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/drawable-ldpi/shape.xml -->

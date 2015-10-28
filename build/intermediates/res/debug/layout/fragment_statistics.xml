@@ -2,38 +2,9 @@
     android:layout_width="match_parent"      
     android:layout_height="match_parent">  
       
-    <com.example.irun.AxleView  
-        android:id="@+id/axleView"  
+    <com.example.irun.HistogramAxleView  
+        android:id="@+id/ha"  
         android:layout_width="match_parent"  
         android:layout_height="match_parent"/>  
   
-    <com.example.irun.HistogramView  
-        android:id="@+id/hv1"  
-        android:layout_width="40dp"  
-        android:layout_height="500dp"  
-        android:layout_alignLeft="@id/axleView"  
-        android:layout_marginLeft="40dp"  
-        android:layout_alignBottom="@id/axleView"  
-        android:layout_marginBottom="70dp"/>  
-      
-    <com.example.irun.HistogramView  
-        android:id="@+id/hv2"  
-        android:layout_width="40dp"  
-        android:layout_height="500dp"  
-        android:layout_alignLeft="@id/axleView"  
-        android:layout_marginLeft="100dp"  
-        android:layout_alignBottom="@id/axleView"  
-        android:layout_marginBottom="70dp"/>  
-      
-    <com.example.irun.HistogramView  
-        android:id="@+id/hv3"  
-        android:layout_width="40dp"  
-        android:layout_height="500dp"  
-        android:layout_alignLeft="@id/axleView"  
-        android:layout_marginLeft="160dp"  
-        android:layout_alignBottom="@id/axleView"  
-        android:layout_marginBottom="70dp"/>  
-      
-
-      
-</RelativeLayout> <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_statistics.xml -->
+</RelativeLayout> <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_statistics.xml -->

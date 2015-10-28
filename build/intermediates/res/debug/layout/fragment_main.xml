@@ -20,11 +20,11 @@
 	    	android:orientation="vertical">   
     	</LinearLayout>
 
-		<LinearLayout
+        <LinearLayout
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-            android:background="@color/main_blue"
+            android:background="#ffbe99"
             android:weightSum="1">
 
 			<FrameLayout
@@ -268,4 +268,4 @@ android:layout_gravity="center_horizontal"
 </android.support.v4.widget.DrawerLayout>
 
 	
-<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_main.xml -->
+<!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_main.xml -->

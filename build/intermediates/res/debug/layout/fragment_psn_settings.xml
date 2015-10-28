@@ -11,16 +11,16 @@
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:background="#be7760"
+        android:background="@color/bar_green"
         android:clickable="true" >
 
         <ImageButton
-            android:layout_width="@dimen/icon_top"
-            android:layout_height="@dimen/icon_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:background="@android:drawable/presence_online"
+            android:background="@drawable/finish_check"
             android:id="@+id/summit_settings"
             android:layout_gravity="right|top"
             android:typeface="monospace" />
@@ -39,6 +39,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/light_grey"
         android:id="@+id/scrollView2" >
 
         <TableLayout
@@ -409,4 +410,4 @@
         </TableLayout>
     </ScrollView>
 
-</LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_psn_settings.xml -->
+</LinearLayout><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/fragment_psn_settings.xml -->
