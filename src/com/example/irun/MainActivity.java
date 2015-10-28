@@ -91,11 +91,53 @@ public class MainActivity extends Activity {
 	
 	public void backToMainFragment()
 	{
+<<<<<<< HEAD
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
+=======
+		FragmentManager fm=getFragmentManager();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/master
+		if(fm.getBackStackEntryCount()==0){
+			Intent intent = new Intent();
+			intent.setAction(Intent.ACTION_MAIN);
+			intent.addCategory(Intent.CATEGORY_HOME);
+			startActivity(intent);
+		}else{
+			//杩欓噷鏈変釜缂洪櫡锛屽氨鏄繃娓′笉鑷劧锛屽叧浜巄orromBar
+			if(fm.getBackStackEntryCount()==1)
+			MainActivity.bottomBar.setVisibility(View.VISIBLE);
+			fm.popBackStack();
+		}
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
+		FragmentTransaction ft=fm.beginTransaction();
+>>>>>>> origin/master
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 		MainFragment.drawerLayout.closeDrawers();
 		fm.popBackStack();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/master
+
+
+//		FragmentTransaction ft=fm.beginTransaction();
+//		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+//		MainFragment.drawerLayout.closeDrawers();
+//		fm.popBackStack();
+
+=======
+>>>>>>> origin/master
 	}
 	
 	private void setFragmentShow(int index)

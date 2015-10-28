@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/attrs.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/attrs.xml -->
     <eat-comment/>
     <attr format="dimension" name="borderRadius"/>
     <attr format="dimension" name="circleWidth"/>
@@ -11,7 +11,7 @@
         <enum name="circle" value="0"/>    
         <enum name="round" value="1"/>    
     </attr>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/colors.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/colors.xml -->
     <eat-comment/>
     <color name="bar_green">#62cac9</color>
     <color name="black"> #000000</color>
@@ -32,7 +32,7 @@
     <color name="white"> #FFFFFF</color>
     <declare-styleable name="CustomProgressBar"><attr name="firstColor"/><attr name="secondColor"/><attr name="circleWidth"/><attr name="speed"/></declare-styleable>
     <declare-styleable name="RoundImageViewByXfermode"><attr name="borderRadius"/><attr name="type"/></declare-styleable>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/dimens.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -53,7 +53,7 @@
     <dimen name="start_title_margin_left">10dp</dimen>
     <dimen name="title_font_size">22sp</dimen>
     <dimen name="title_margin_vertical">12dp</dimen>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/strings.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">iRun</string>
@@ -112,7 +112,7 @@
     <string name="sensitivity_info">灵敏度越高,对身体的动作越敏感.请调节灵敏度来适应不同的体形,路面等因素.</string>
     <string name="setp_length_info_1">为估算行走的距离和速度，请输入步长</string>
     <string name="setp_length_info_2">(得出的速度和距离较为粗略，仅供参考)</string>
-    <string name="settings_title">设置</string>
+    <string name="settings_title">计步器设置</string>
     <string name="start">开始</string>
     <string name="step_length">步长:</string>
     <string name="step_number">步\t数</string>
@@ -137,11 +137,11 @@
     <string name="weight_info">为计算消耗的热量(卡路里)，请入体重。</string>
     <string name="weigth">体重:</string>
     <string name="zero">0</string>
-    <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/values/styles.xml -->
+    <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Light">
 	   <!-- 隐藏状态栏 -->
-	   <!--<item name="android:windowFullscreen">true</item>-->
+	   <item name="android:windowFullscreen">true</item>
 	   <!-- 隐藏标题栏 -->
 	   <item name="android:windowNoTitle">true</item>
     </style>
@@ -165,5 +165,11 @@
         <item name="android:textColor">#818181</item>
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center</item>
+    </style>
+    <style name="drawer_left">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#fffff7</item>
     </style>
 </resources>

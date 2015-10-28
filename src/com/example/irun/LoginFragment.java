@@ -10,6 +10,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 //µÇÂ¼½çÃæ
@@ -26,9 +28,9 @@ public class LoginFragment extends Fragment implements OnClickListener {
 	private EditText editPassword;
 	private Button buttonLogin;
 	private Button buttonCancel;
-	
+	private Button buttonRegister;
 	private MessageReceiver messageReceiver;
-	
+	Datebase database = new Datebase();
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -38,10 +40,11 @@ public class LoginFragment extends Fragment implements OnClickListener {
 		editPassword = (EditText) view.findViewById(R.id.password);
 		buttonLogin = (Button) view.findViewById(R.id.btnLogin);
 		buttonCancel = (Button) view.findViewById(R.id.btnCancel);
-		
+		buttonRegister = (Button) view.findViewById(R.id.regiter);
+
 		buttonLogin.setOnClickListener(this);
 		buttonCancel.setOnClickListener(this);
-		
+		buttonRegister.setOnClickListener(this);
         initMessageReceiver();
         
 		return view;
@@ -52,7 +55,7 @@ public class LoginFragment extends Fragment implements OnClickListener {
 		messageReceiver = new MessageReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction("SocketService");
-        getActivity().registerReceiver(messageReceiver,filter);
+        getActivity().registerReceiver(messageReceiver, filter);
 	}
 	
 	@Override
@@ -90,7 +93,13 @@ public class LoginFragment extends Fragment implements OnClickListener {
 		if(v.getId() == R.id.btnLogin)
 		{
 			if((editUser.getText().toString().length() > 0) && (editPassword.getText().toString().length() > 0))
-			{	
+			{String a=null,b=editPassword.getText().toString();
+				try {
+					 a =database.select(editUser.getText().toString());
+				}catch (Exception e){};
+
+				if(b.equals(a)){
+					toMainFragment();
 				try {
 					JSONObject root = new JSONObject();
 					root.put("user", editUser.getText());
@@ -98,15 +107,24 @@ public class LoginFragment extends Fragment implements OnClickListener {
 					SocketService.send(root.toString());
 				} catch (JSONException e) {
 					e.printStackTrace();
-				}			
+				}		}	}
 			}
-		}
+
 		else if(v.getId() == R.id.btnCancel)
 		{
 			Toast.makeText(getActivity(), "login fail", Toast.LENGTH_SHORT).show();
 			toMainFragment();
-		}	
-	}
+		}
+		else if(v.getId() == R.id.regiter){
+			try{
+
+
+
+				database.insert1(editUser.getText().toString(),editPassword.getText().toString());
+
+			}catch (Exception e){e.getMessage();
+		}
+	}}
 	
 	private void toMainFragment()
 	{		

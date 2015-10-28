@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    //填充颜色
+    <solid android:color="@color/darkyellow"/>
+
+    <!--//描边-->
+    <!--<stroke android:width="2.0dip"-->
+        <!--android:color="#99D9D9D9"-->
+    <!--/>-->
+
+    //表示圆角半径
+        <corners
+        android:radius="20.0dip"
+        />
+    //表示间距
+        <padding
+            android:left="5.0dip"
+            android:top="2.0dip"
+            android:right="5.0dip"
+            android:bottom="2.0dip"
+        />
+
+
+</shape>
+

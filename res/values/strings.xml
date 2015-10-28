@@ -37,7 +37,7 @@
     <string name="day">日</string>
     <string name="todo">TODO</string>
     <string name="information">说明</string>
-    <string name="settings_title">设置</string>
+    <string name="settings_title">计步器设置</string>
     <string name="sensitivity">灵敏度：</string>
     <string name="low">低</string>
     <string name="high">高</string>

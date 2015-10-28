@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
     
     <FrameLayout
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
         	android:layout_width="match_parent"
         	android:layout_height="30dp"
         	android:text="title"
+            android:textSize="@dimen/title_font_size"
         	android:gravity="center_horizontal|center_vertical"
             android:layout_gravity="center_vertical"
             android:textColor="@android:color/white" />
@@ -53,8 +54,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:orientation="horizontal">
 
             <Button
@@ -62,8 +64,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.50"
-                android:background="@color/light_grey"
+                android:background="@drawable/friend_operation"
                 android:text="删除好友"
+                android:textColor="@color/darkgrey"
                 android:drawableLeft="@drawable/del_conacts"/>
 
             <Button
@@ -71,8 +74,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.50"
-                android:background="@color/light_grey"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/friend_operation"
                 android:text="添加好友"
+                android:textColor="@color/darkgrey"
                 android:drawableLeft="@drawable/add_contacts"/>
 
         </LinearLayout>
@@ -81,6 +86,24 @@
 
     </LinearLayout>
 
+<!--<<<<<<< HEAD-->
+
+<<<<<<< HEAD
+    <!--<ListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginEnd="2dp"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:layout_marginStart="2dp"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!-- -->
+    <!--</ListView>-->
+<!--=======-->
+=======
+=======
+>>>>>>> origin/master
     <ListView
         android:id="@+id/listview"
         android:layout_marginTop="5dp"
@@ -93,11 +116,18 @@
         
     </ListView>
 
+>>>>>>> origin/master
     <ExpandableListView   
         android:id="@+id/elv"  
         android:layout_width="match_parent"  
-        android:layout_height="wrap_content">  
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        >
     </ExpandableListView>
     
+<<<<<<< HEAD
+<!--&gt;>>>>>> origin/master-->
+=======
+
 >>>>>>> origin/master
 </LinearLayout>

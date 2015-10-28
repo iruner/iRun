@@ -155,8 +155,8 @@ public class MainFragment extends Fragment implements OnClickListener {
 			
 			canRandom = false;
 			buttonStart.setEnabled(false);
-			buttonPause.setEnabled(true);
 			buttonStart.setVisibility(ImageView.GONE);
+			buttonPause.setEnabled(true);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_RUN00_F");
 		}
@@ -169,19 +169,25 @@ public class MainFragment extends Fragment implements OnClickListener {
 			handler.removeCallbacks(calculateRunnable);
 			
 			canRandom = true;
+			buttonStart.setVisibility(ImageView.VISIBLE);
 			buttonStart.setEnabled(true);
 			buttonPause.setEnabled(false);
-			buttonStart.setVisibility(ImageView.VISIBLE);
 //			UnityPlayer.UnitySendMessage("Main Camera","Move","-0.25");
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","0_WAIT00");
 		}
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
+<<<<<<< HEAD
+=======
 
 				buttonStart.setVisibility(ImageView.VISIBLE);
 
+>>>>>>> origin/master
 				database.insert(step, distance, calories);
+				buttonPause.setEnabled(false);
+				buttonStart.setVisibility(ImageView.VISIBLE);
+				buttonStart.setEnabled(true);
 
 			}catch (Exception e){e.getMessage();}
 			StepDetector.CURRENT_SETP = 0;

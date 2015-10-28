@@ -10,6 +10,7 @@
   	<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+<<<<<<< HEAD
    
   	        <RelativeLayout
 		        android:layout_width="match_parent"
@@ -18,11 +19,31 @@
 		    	android:id="@+id/unityViewLyaout">   
     		</RelativeLayout>
    
+=======
+
+  	    <LinearLayout
+	        android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+			android:background="@color/transparent"
+	    	android:id="@+id/unityViewLyaout"
+	    	android:orientation="vertical">   
+    	</LinearLayout>
+<<<<<<< HEAD
+
+        <LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+            android:background="#ffbe99"
+=======
+    	
+>>>>>>> origin/master
 		<LinearLayout
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:background="@color/main_blue"
+>>>>>>> origin/master
             android:weightSum="1">
             <!-- android:background="@color/main_blue" -->
 

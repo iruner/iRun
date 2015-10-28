@@ -4,9 +4,9 @@
     android:layout_height="180dp"
     android:numColumns="6"    
     android:visibility="visible"
-    android:background="@color/grey">
+    android:background="@color/light_green">
 </GridView>
 
 
 
-<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/grid_view.xml -->
+<!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/grid_view.xml -->

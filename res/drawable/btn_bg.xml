@@ -6,6 +6,6 @@
     <!-- 不可用 -->
     <item android:drawable="@color/btn_bg_unen" android:state_enabled="false"/>
     <!-- 默认时 -->
-    <item android:drawable="@color/btn_bg_en"/>
+    <item android:drawable="@drawable/step_settings_btns"/>
 
 </selector>
