@@ -95,7 +95,7 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 	
 	private void toOtherFragment(Fragment f) 
 	{
-		MainActivity.bottomBar.setVisibility(View.GONE);
+		MainActivity.bottomBar.setVisibility(View.INVISIBLE);
 		
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();

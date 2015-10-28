@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 //显示模型的界面，同时还有计步器的功能
@@ -86,7 +87,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 		
 //		UnityPlayer unityPlayer = new UnityPlayer(getActivity());
 //		View playerView = unityPlayer.getView();
-//		LinearLayout ll = (LinearLayout)view.findViewById(R.id.unityViewLyaout);
+//		RelativeLayout ll = (RelativeLayout)view.findViewById(R.id.unityViewLyaout);
 //		ll.addView(playerView);
 		
 		buttonOpenDrawer = (Button)view.findViewById(R.id.buttonOpenDrawer);
@@ -117,7 +118,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 		});
 			
 		handler = new Handler();
-//		
+		
 //		hide();
 //		new Handler().postDelayed(new Runnable() {			
 //			@Override
@@ -129,7 +130,7 @@ public class MainFragment extends Fragment implements OnClickListener {
 //		        intent.putExtras(bundle);
 //		        getActivity().startService(intent);
 //			}
-//		}, 5000);
+//		}, 3500);
 //		
 //		new Handler().postDelayed(new Runnable() {			
 //			@Override
@@ -262,9 +263,9 @@ public class MainFragment extends Fragment implements OnClickListener {
 	public void hide()
 	{
 		MainActivity.bottomBar.setVisibility(View.GONE);
-		topBarLayout.setVisibility(View.GONE);
-		buttonLayout.setVisibility(View.GONE);
-		textViewLayout.setVisibility(View.GONE);
+		topBarLayout.setVisibility(View.INVISIBLE);
+		buttonLayout.setVisibility(View.INVISIBLE);
+		textViewLayout.setVisibility(View.INVISIBLE);
 	}
 	
 	public void show()

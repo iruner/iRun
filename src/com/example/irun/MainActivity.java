@@ -65,6 +65,7 @@ public class MainActivity extends Activity {
 			}
 		});	
 
+		bottomBar.setVisibility(View.GONE);
 		setFragmentShow(0);
 		startService(new Intent(MainActivity.this, SocketService.class));
 		
@@ -90,8 +91,8 @@ public class MainActivity extends Activity {
 	
 	public void backToMainFragment()
 	{
-		FragmentManager fm=getFragmentManager();
-		FragmentTransaction ft=fm.beginTransaction();
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
 		MainActivity.bottomBar.setVisibility(View.VISIBLE);
 		MainFragment.drawerLayout.closeDrawers();
 		fm.popBackStack();

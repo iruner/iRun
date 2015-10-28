@@ -196,7 +196,9 @@ public class StepSettingFragment extends Fragment implements OnClickListener {
 	
 	private void toMainFragment()
 	{
+		MainActivity.bottomBar.setVisibility(View.VISIBLE);	
 		MainFragment.drawerLayout.closeDrawers();
+		
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
 		ft.remove(this);

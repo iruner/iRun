@@ -14,7 +14,7 @@
 
 	<FrameLayout
 		android:layout_width="fill_parent"
-		android:layout_height="61dp"
+		android:layout_height="65dp"
         android:id="@+id/bottomBar"
 		android:background="@color/btm_blue">
 

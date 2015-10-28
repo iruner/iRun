@@ -4,11 +4,11 @@ public class Expression {
 
 	public static int[] drawable = new int[]
 	{	
-		R.drawable.dra,R.drawable.drb,R.drawable.drc,R.drawable.drd,R.drawable.dre,R.drawable.drf,
-		R.drawable.drg,R.drawable.drh,R.drawable.dri,R.drawable.drg,R.drawable.drk,R.drawable.drl,
-		R.drawable.drm,R.drawable.drn,R.drawable.dro,R.drawable.drp,R.drawable.drq,R.drawable.drr,
-		R.drawable.drs,R.drawable.drt,R.drawable.dru,R.drawable.drv,R.drawable.drw,R.drawable.drs,
-		R.drawable.dry,R.drawable.drz,
+		R.mipmap.dra,R.mipmap.drb,R.mipmap.drc,R.mipmap.drd,R.mipmap.dre,R.mipmap.drf,
+		R.mipmap.drg,R.mipmap.drh,R.mipmap.dri,R.mipmap.drg,R.mipmap.drk,R.mipmap.drl,
+		R.mipmap.drm,R.mipmap.drn,R.mipmap.dro,R.mipmap.drp,R.mipmap.drq,R.mipmap.drr,
+		R.mipmap.drs,R.mipmap.drt,R.mipmap.dru,R.mipmap.drv,R.mipmap.drw,R.mipmap.drs,
+		R.mipmap.dry,R.mipmap.drz,
 	};
 	
 	public static String[] describe = new String[] 
