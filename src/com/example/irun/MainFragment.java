@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 //显示模型的界面，同时还有计步器的功能
@@ -106,14 +107,12 @@ public class MainFragment extends Fragment implements OnClickListener {
 			public void onDrawerOpened(View drawerView) {
 				MainFragment.canRandom = false;
 //				UnityPlayer.UnitySendMessage("Main Camera","Move","-0.25");
-				super.onDrawerOpened(drawerView);
 			}
 			
 			@Override
 			public void onDrawerClosed(View drawerView) {
 				MainFragment.canRandom = true;
 //				UnityPlayer.UnitySendMessage("Main Camera","Move","0.25");
-				super.onDrawerClosed(drawerView);
 			}
 		});
 			
@@ -178,10 +177,9 @@ public class MainFragment extends Fragment implements OnClickListener {
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
-<<<<<<< HEAD
+
 				buttonStart.setVisibility(ImageView.VISIBLE);
-=======
->>>>>>> origin/master
+
 				database.insert(step, distance, calories);
 
 			}catch (Exception e){e.getMessage();}
