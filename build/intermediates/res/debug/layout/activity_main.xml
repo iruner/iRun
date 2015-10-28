@@ -23,66 +23,6 @@
             android:layout_height="60dp"
             android:paddingTop="5dp"
             android:layout_alignParentBottom="true"
-<<<<<<< HEAD
-            android:id="@+id/radioGroup"
-            android:orientation="horizontal" >
-         
-            <RadioButton
-	            android:id="@+id/rb1"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_1"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp"
-	            android:checked="true" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb2"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_2"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb3"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_3"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-	        
-	        <RadioButton
-	            android:id="@+id/rb4"
-	            android:layout_width="0dp"
-	            android:layout_height="match_parent"
-	            android:layout_gravity="center"
-	            android:layout_weight="1"
-	            android:background="#00000000"
-	            android:button="@null"
-	            android:drawableTop="@drawable/selector_4"
-	            android:gravity="center"
-	            android:text="history"
-	            android:textSize="13sp" />
-        </RadioGroup>
-    </RelativeLayout>
-</LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/activity_main.xml -->
-=======
             android:background="@color/white"
             android:gravity="bottom"
 			android:layout_gravity="left|bottom">
@@ -145,5 +85,4 @@
         </RelativeLayout>
 	</FrameLayout>
 
-</LinearLayout><!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/activity_main.xml -->
->>>>>>> 60106a58cef5dadbe9e0c886a8bcd2b01518658d
+</LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/activity_main.xml -->

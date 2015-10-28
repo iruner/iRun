@@ -22,7 +22,7 @@
     	android:layout_height="wrap_content" >
     	
         <TextView
-            android:id="@+id/id"
+            android:id="@+id/childText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="id" />
@@ -35,4 +35,4 @@
 
     </LinearLayout>
 </LinearLayout>
-<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/list_friend.xml -->
+<!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/list_child.xml -->

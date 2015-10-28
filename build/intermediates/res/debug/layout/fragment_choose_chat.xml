@@ -93,4 +93,12 @@
         android:layout_height="wrap_content">
         
     </ListView>
+
+    <ExpandableListView   
+        android:id="@+id/elv"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content">  
+    </ExpandableListView>
+    
+
 </LinearLayout><!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/fragment_choose_chat.xml -->

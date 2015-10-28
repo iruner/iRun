@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/transparent" >
@@ -10,7 +10,7 @@
         android:layout_height="100dp"
         android:layout_margin="5dp"
         android:background="@drawable/head"
-        android:layout_gravity="right" />
+        android:layout_gravity="center_horizontal" />
     
     <Button
         android:id="@+id/drawerLogin"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="点击登录"
         android:textColor="@color/white"
-        android:layout_gravity="right" />
+        android:layout_gravity="center_horizontal" />
     
     <ListView  
         android:id="@+id/drawerList"  
