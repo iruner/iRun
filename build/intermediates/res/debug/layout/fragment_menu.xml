@@ -3,6 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@color/light_grey" >
 
     <LinearLayout
@@ -31,6 +32,26 @@
     </LinearLayout>
 
     <ListView
+=======
+    android:background="@color/transparent" >
+    
+    <ImageView 
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/head"
+        android:layout_gravity="center_horizontal" />
+    
+    <Button
+        android:id="@+id/drawerLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击登录"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal" />
+    
+    <ListView  
+>>>>>>> origin/master
         android:id="@+id/drawerList"  
         android:layout_width="200dp"
         android:layout_height="match_parent"

@@ -11,4 +11,8 @@
         android:layout_width="match_parent"  
         android:layout_height="wrap_content"/>  
       
+<<<<<<< HEAD
 </LinearLayout> <!-- From: file:/D:/360data/重要数据/我的文档/GitHub/iRun/res/layout/list_group.xml -->
+=======
+</LinearLayout> <!-- From: file:/C:/Users/31/Documents/GitHub/iRun/res/layout/list_group.xml -->
+>>>>>>> origin/master

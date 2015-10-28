@@ -88,6 +88,7 @@
 
 <!--<<<<<<< HEAD-->
 
+<<<<<<< HEAD
     <!--<ListView-->
         <!--android:id="@+id/listview"-->
         <!--android:layout_marginTop="5dp"-->
@@ -100,6 +101,22 @@
         <!-- -->
     <!--</ListView>-->
 <!--=======-->
+=======
+=======
+>>>>>>> origin/master
+    <ListView
+        android:id="@+id/listview"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </ListView>
+
+>>>>>>> origin/master
     <ExpandableListView   
         android:id="@+id/elv"  
         android:layout_width="match_parent"  
@@ -108,5 +125,9 @@
         >
     </ExpandableListView>
     
+<<<<<<< HEAD
 <!--&gt;>>>>>> origin/master-->
+=======
+
+>>>>>>> origin/master
 </LinearLayout>

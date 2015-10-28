@@ -11,21 +11,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+  	    <LinearLayout
 	        android:layout_width="fill_parent"
         	android:layout_height="fill_parent"
-	    	android:layout_weight="1"
 			android:background="@color/transparent"
 	    	android:id="@+id/unityViewLyaout"
 	    	android:orientation="vertical">   
     	</LinearLayout>
+<<<<<<< HEAD
 
         <LinearLayout
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
             android:background="#ffbe99"
+=======
+    	
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/main_blue"
+>>>>>>> origin/master
             android:weightSum="1">
+            <!-- android:background="@color/main_blue" -->
 
 			<FrameLayout
 			    android:id="@+id/topBarLayout"
@@ -49,7 +58,6 @@
 					android:typeface="monospace" />
 
             </FrameLayout>
-            //android:allowUndo="false"
 
             <LinearLayout
                 android:id="@+id/textViewLayout"
@@ -121,29 +129,29 @@
                 </LinearLayout>
 
                 <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    				android:layout_width="match_parent"
+    				android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-    android:orientation="horizontal">
+    				android:orientation="horizontal">
 
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="热量:"
-        android:textColor="@color/white" />
-    <TextView
-    android:id="@+id/calories"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="0"
-        android:textColor="@color/white" />
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="卡路里"
-        android:textColor="@color/white" />
-
-    </LinearLayout>
+				   <TextView
+					   	android:layout_width="wrap_content"
+					   	android:layout_height="wrap_content"
+					   	android:text="热量:"
+				        android:textColor="@color/white" />
+				   <TextView
+				  		android:id="@+id/calories"
+					   	android:layout_width="wrap_content"
+					   	android:layout_height="wrap_content"
+					   	android:text="0"
+				       android:textColor="@color/white" />
+				   <TextView
+				   		android:layout_width="wrap_content"
+				  		android:layout_height="wrap_content"
+				   		android:text="卡路里"
+				       android:textColor="@color/white" />
+				
+			   </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -151,16 +159,16 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="用时:"
+        				android:layout_width="wrap_content"
+        				android:layout_height="wrap_content"
+        				android:text="用时:"
                         android:textColor="@color/white" />
 
                     <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
+        				android:id="@+id/time"
+        				android:layout_width="wrap_content"
+        				android:layout_height="wrap_content"
+        				android:text="0"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
@@ -191,19 +199,19 @@
     </LinearLayout>
 
             <LinearLayout
-    android:id="@+id/buttonLayout"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-                android:paddingLeft="10dp"
+    			android:id="@+id/buttonLayout"
+    			android:layout_width="match_parent"
+    			android:layout_height="50dp"
+               
                 android:layout_marginTop="20dp"
-    android:orientation="horizontal"
+    			android:orientation="horizontal"
                 android:layout_weight="0.25">
 
                 <ImageButton
-                android:id="@+id/buttonClear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Clear"
+                	android:id="@+id/buttonClear"
+                	android:layout_width="wrap_content"
+               		android:layout_height="wrap_content"
+                	android:text="Clear"
                     android:background="@drawable/clear"
                     android:layout_gravity="top" />
 
@@ -212,20 +220,20 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                    android:id="@+id/buttonPause"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                   		android:id="@+id/buttonPause"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                    android:text="Pause"
+                    	android:text="Pause"
                         android:background="@drawable/pause" />
 
                     <ImageButton
-        android:id="@+id/buttonStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Start"
-            android:background="@drawable/play" />
+        				android:id="@+id/buttonStart"
+        				android:layout_width="wrap_content"
+        				android:layout_height="wrap_content"
+        				android:layout_marginLeft="10dp"
+        				android:text="Start"
+            			android:background="@drawable/play" />
 
                 </FrameLayout>
 
@@ -240,10 +248,10 @@
                 android:layout_marginBottom="0dp" >
 
                 <ListView
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:id="@+id/listView"
-android:layout_gravity="center_horizontal"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/listView"
+					android:layout_gravity="center_horizontal"
                     android:layout_alignTop="@+id/scrollView"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
