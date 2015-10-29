@@ -27,10 +27,10 @@ public class LoginFragment extends Fragment implements OnClickListener {
 	private EditText editUser;
 	private EditText editPassword;
 	private Button buttonLogin;
-	private Button buttonCancel;
 	private Button buttonRegister;
 	private MessageReceiver messageReceiver;
 	Datebase database = new Datebase();
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -39,11 +39,9 @@ public class LoginFragment extends Fragment implements OnClickListener {
 		editUser = (EditText) view.findViewById(R.id.user);
 		editPassword = (EditText) view.findViewById(R.id.password);
 		buttonLogin = (Button) view.findViewById(R.id.btnLogin);
-		buttonCancel = (Button) view.findViewById(R.id.btnCancel);
-		buttonRegister = (Button) view.findViewById(R.id.regiter);
+		buttonRegister = (Button) view.findViewById(R.id.btnRegister);
 
 		buttonLogin.setOnClickListener(this);
-		buttonCancel.setOnClickListener(this);
 		buttonRegister.setOnClickListener(this);
         initMessageReceiver();
         
@@ -90,51 +88,75 @@ public class LoginFragment extends Fragment implements OnClickListener {
 	
 	@Override
 	public void onClick(View v) {
+		String user = editUser.getText().toString();
+		String password = editPassword.getText().toString();
+		
 		if(v.getId() == R.id.btnLogin)
 		{
-			if((editUser.getText().toString().length() > 0) && (editPassword.getText().toString().length() > 0))
-			{String a=null,b=editPassword.getText().toString();
-				try {
-					 a =database.select(editUser.getText().toString());
-				}catch (Exception e){};
+			if((user.length() > 0) && (password.length() > 0))
+			{
+				String a = null;
+				try 
+				{
+					a = database.select(user);
+				}catch (Exception e)
+				{				
+				};
 
-				if(b.equals(a)){
+				if(password.equals(a))
+				{
+					Toast.makeText(getActivity(), "login success", Toast.LENGTH_SHORT).show();
 					toMainFragment();
-				try {
-					JSONObject root = new JSONObject();
-					root.put("user", editUser.getText());
-					root.put("password", editPassword.getText());
-					SocketService.send(root.toString());
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}		}	}
+//					try 
+//					{
+//						JSONObject root = new JSONObject();
+//						root.put("user", editUser.getText());
+//						root.put("password", editPassword.getText());
+//						SocketService.send(root.toString());
+//					} catch (JSONException e) 
+//					{
+//						e.printStackTrace();
+//					}		
+				}
+				else
+				{
+					Toast.makeText(getActivity(), "login fail", Toast.LENGTH_SHORT).show();
+				}
 			}
-
-		else if(v.getId() == R.id.btnCancel)
+			else
+			{
+				Toast.makeText(getActivity(), "login fail", Toast.LENGTH_SHORT).show();
+			}
+		}
+		else if(v.getId() == R.id.btnRegister)
 		{
-			Toast.makeText(getActivity(), "login fail", Toast.LENGTH_SHORT).show();
-			toMainFragment();
+			if((user.length() > 0) && (password.length() > 0))
+			{
+				Toast.makeText(getActivity(), "register success", Toast.LENGTH_SHORT).show();
+				try
+				{
+					database.insert1(user,password);
+				}catch (Exception e)
+				{
+					e.getMessage();
+				}
+			}
+			else 
+			{
+				Toast.makeText(getActivity(), "register fail", Toast.LENGTH_SHORT).show();
+			}
 		}
-		else if(v.getId() == R.id.regiter){
-			try{
-
-
-
-				database.insert1(editUser.getText().toString(),editPassword.getText().toString());
-
-			}catch (Exception e){e.getMessage();
-		}
-	}}
+	}
 	
 	private void toMainFragment()
 	{		
-		MainActivity.bottomBar.setVisibility(View.VISIBLE);
+		MainActivity.rootView2.setVisibility(View.VISIBLE);
 		MainFragment.drawerLayout.closeDrawers();
 		
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
-		ft.show(fm.findFragmentByTag("MainFragment"));
-		ft.hide(this);
+		//ft.show(fm.findFragmentByTag("MainFragment"));
+		ft.remove(this);
 		ft.commit();
 	}
 }

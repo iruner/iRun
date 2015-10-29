@@ -107,13 +107,11 @@ public class MainFragment extends Fragment implements OnClickListener {
 			@Override
 			public void onDrawerOpened(View drawerView) {
 				MainFragment.canRandom = false;
-//				UnityPlayer.UnitySendMessage("Main Camera","Move","-0.25");
 			}
 			
 			@Override
 			public void onDrawerClosed(View drawerView) {
 				MainFragment.canRandom = true;
-//				UnityPlayer.UnitySendMessage("Main Camera","Move","0.25");
 			}
 		});
 			
@@ -178,12 +176,8 @@ public class MainFragment extends Fragment implements OnClickListener {
 		else if(v.getId() == R.id.buttonClear)
 		{
 			try{
-<<<<<<< HEAD
-=======
-
 				buttonStart.setVisibility(ImageView.VISIBLE);
 
->>>>>>> origin/master
 				database.insert(step, distance, calories);
 				buttonPause.setEnabled(false);
 				buttonStart.setVisibility(ImageView.VISIBLE);

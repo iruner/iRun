@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rootView"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent">
+    
+    <FrameLayout 
+        android:id="@+id/rootView" 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+        
+        <LinearLayout 
+      	android:id="@+id/rootView2"  
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
 
     <FrameLayout 
        	android:id="@+id/content"
@@ -86,3 +95,6 @@
 	</FrameLayout>
 
 </LinearLayout>
+    </FrameLayout>
+    
+</FrameLayout>

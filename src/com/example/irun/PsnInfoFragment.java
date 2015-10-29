@@ -31,13 +31,11 @@ public class PsnInfoFragment extends Fragment implements OnClickListener {
 
 
     public void onClick(View v){
-        FragmentManager fm=getFragmentManager();
-        FragmentTransaction ft=fm.beginTransaction();
-        MainActivity.bottomBar.setVisibility(View.GONE);
-        ft.hide(this);
-        //锟斤拷R.id.*锟斤拷锟节碉拷layout锟斤拷锟斤拷Fragment锟斤拷new **()锟斤拷指锟斤拷牟锟斤拷锟�**
-        ft.add(R.id.content, new PsnInfoSettingFragment(), "PsnInfoSettingsFragment");
-        ft.addToBackStack(null);
-        ft.commit();
+
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		ft.add(R.id.rootView, new PsnInfoSettingFragment());
+		ft.addToBackStack(null);
+		ft.commit();
     }
 }

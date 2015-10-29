@@ -75,10 +75,6 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 //		else if(position == 4) {
 //			UnityPlayer.UnitySendMessage("unitychan","PlayAnim","1_POSE05");
 //		}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 		if(position == 0) {
 			toOtherFragment(new PsnInfoFragment());
 		}
@@ -89,59 +85,21 @@ public class MenuFragment extends Fragment implements OnClickListener,OnItemClic
 			toOtherFragment(new WeatherFragment());
 		}
 		else if(position == 4) {
-<<<<<<< HEAD
-			MainActivity.bottomBar.setVisibility(View.GONE);
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.content, new StatisticsFragment());
-			ft.hide(fm.findFragmentByTag("MainFragment"));
-			ft.addToBackStack(null);
-			ft.commit();
-		}
-		else if(position == 5) {
-			MainActivity.bottomBar.setVisibility(View.GONE);
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction ft = fm.beginTransaction();
-			ft.add(R.id.content, new StepSettingFragment());
-			ft.addToBackStack(null);
-			ft.commit();
-<<<<<<< HEAD
-		}
-
-	}
-
-
-=======
-
-		if(position == 4) {
-			toOtherFragment(new TaskFragment());
-		}
-		else if(position == 5) {
-=======
->>>>>>> origin/master
 			toOtherFragment(new StatisticsFragment());
 		}
 		else if(position == 5) {
 			toOtherFragment(new StepSettingFragment());
-<<<<<<< HEAD
-
 		}
-		else if(position == 6) {
+	}
 
-=======
->>>>>>> origin/master
-		}
-	}}
-	
->>>>>>> origin/master
 	private void toOtherFragment(Fragment f) 
 	{
-		MainActivity.bottomBar.setVisibility(View.INVISIBLE);
+		MainActivity.rootView2.setVisibility(View.INVISIBLE);
 		
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
-		ft.add(R.id.content, f);
-		ft.hide(fm.findFragmentByTag("MainFragment"));
+		ft.add(R.id.rootView, f);
+		
 		ft.addToBackStack(null);
 		ft.commit();
 	}

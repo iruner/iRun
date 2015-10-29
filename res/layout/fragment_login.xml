@@ -80,23 +80,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancel"
+            android:text="Register"
             android:textAllCaps="false"
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnRegister"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="13dp"
             android:layout_below="@+id/btnLogin"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:id="@+id/regiter"
-            android:layout_below="@+id/btnCancel"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="26dp" />
     </RelativeLayout>
     
 </LinearLayout>

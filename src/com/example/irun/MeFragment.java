@@ -45,18 +45,18 @@ public class MeFragment extends Fragment implements OnClickListener {
         FragmentTransaction ft=fm.beginTransaction();
         switch(v.getId()){
             case R.id.row_psn_info:{
-                MainActivity.bottomBar.setVisibility(View.GONE);
+                MainActivity.rootView2.setVisibility(View.INVISIBLE);
                 ft.hide(this);
-                ft.add(R.id.content, new PsnInfoFragment(), "PsnInfoFragment");
+                ft.add(R.id.rootView, new PsnInfoFragment(), "PsnInfoFragment");
                 ft.addToBackStack(null);
                 ft.commit();
             }
                 break;
             case R.id.row_weather:{
-                MainActivity.bottomBar.setVisibility(View.GONE);
+            	MainActivity.rootView2.setVisibility(View.INVISIBLE);
                 ft.hide(this);
                 //锟斤拷R.id.*锟斤拷锟节碉拷layout锟斤拷锟斤拷Fragment锟斤拷new **()锟斤拷指锟斤拷牟锟斤拷锟�**
-                ft.add(R.id.content, new WeatherFragment(), "WeatherFragment");
+                ft.add(R.id.rootView, new WeatherFragment(), "WeatherFragment");
                 ft.addToBackStack(null);
                 ft.commit();
             }
