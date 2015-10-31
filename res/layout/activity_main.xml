@@ -23,26 +23,22 @@
 
 	<FrameLayout
 		android:layout_width="fill_parent"
-		android:layout_height="65dp"
+		android:layout_height="80dp"
         android:id="@+id/bottomBar"
 		android:background="@color/btm_blue">
 
 		<RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            android:paddingTop="5dp"
+            android:layout_height="75dp"
             android:layout_alignParentBottom="true"
             android:background="@color/white"
-            android:gravity="bottom"
+            android:gravity="center"
 			android:layout_gravity="left|bottom">
-
-            //设置底下栏样式
-            //android:background="@drawable/bottom_bar"
 
             <RadioGroup
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
                 android:id="@+id/radioGroup"
                 android:orientation="horizontal" >
 

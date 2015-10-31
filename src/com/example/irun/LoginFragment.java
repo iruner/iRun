@@ -106,17 +106,17 @@ public class LoginFragment extends Fragment implements OnClickListener {
 				if(password.equals(a))
 				{
 					Toast.makeText(getActivity(), "login success", Toast.LENGTH_SHORT).show();
-					toMainFragment();
-//					try 
-//					{
-//						JSONObject root = new JSONObject();
-//						root.put("user", editUser.getText());
-//						root.put("password", editPassword.getText());
-//						SocketService.send(root.toString());
-//					} catch (JSONException e) 
-//					{
-//						e.printStackTrace();
-//					}		
+//					toMainFragment();
+					try 
+					{
+						JSONObject root = new JSONObject();
+						root.put("user", editUser.getText());
+						root.put("password", editPassword.getText());
+						SocketService.send(root.toString());
+					} catch (JSONException e) 
+					{
+						e.printStackTrace();
+					}		
 				}
 				else
 				{

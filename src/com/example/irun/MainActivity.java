@@ -1,5 +1,7 @@
 package com.example.irun;
 
+import com.baidu.android.pushservice.PushConstants;
+import com.baidu.android.pushservice.PushManager;
 import com.unity3d.player.UnityPlayerActivity;
 
 import android.app.Activity;
@@ -76,6 +78,10 @@ public class MainActivity extends Activity {
 	    IntentFilter filter = new IntentFilter();
 	    filter.addAction("back");
 	    registerReceiver(receiver, filter);
+	    
+	    PushManager.startWork(getApplicationContext(),
+
+                PushConstants.LOGIN_TYPE_API_KEY,"uy0hVGTGyIMACCmWwz4YAKrB");
 	}
 	
 	@Override
